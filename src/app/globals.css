@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7f6f2;
+  --bg-2: #efeee8;
+  --ink: #0c0c0d;
+  --ink-soft: #58575a;
+  --rule: #c9c8c1;
+  --accent: #1c2bd6;
+  --accent-soft: rgba(28, 43, 214, 0.12);
+
+  --grid-bg: #0a0a0b;
+  --grid-line: #1d1d20;
+  --grid-fg: #efeee8;
+  --grid-soft: #6b6b6e;
+  --grid-accent: #ff5b3a;
+
+  --sky-bg: #fafaf6;
+  --sky-ink: #0c0c0d;
+  --sky-soft: #76767a;
+  --sky-rule: #d6d6cf;
+  --sky-accent: #1c2bd6;
+
+  --film-bg: #08080a;
+  --film-fg: #e9e7e0;
+  --film-soft: #88858a;
+  --film-rule: #1f1f23;
+  --film-accent: #f0d055;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-grid-bg: var(--grid-bg);
+  --color-grid-fg: var(--grid-fg);
+  --color-grid-line: var(--grid-line);
+  --color-grid-soft: var(--grid-soft);
+  --color-grid-accent: var(--grid-accent);
+  --color-sky-bg: var(--sky-bg);
+  --color-sky-ink: var(--sky-ink);
+  --color-sky-soft: var(--sky-soft);
+  --color-sky-rule: var(--sky-rule);
+  --color-sky-accent: var(--sky-accent);
+  --color-film-bg: var(--film-bg);
+  --color-film-fg: var(--film-fg);
+  --color-film-soft: var(--film-soft);
+  --color-film-rule: var(--film-rule);
+  --color-film-accent: var(--film-accent);
+
+  --font-display: var(--font-spectral);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jbm);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: "kern", "liga", "ss01", "tnum";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+.mode-grid {
+  background: var(--grid-bg);
+  color: var(--grid-fg);
+}
+.mode-grid ::selection {
+  background: var(--grid-accent);
+  color: var(--grid-bg);
+}
+
+.mode-sky {
+  background: var(--sky-bg);
+  color: var(--sky-ink);
+}
+
+.mode-film {
+  background: var(--film-bg);
+  color: var(--film-fg);
+}
+.mode-film ::selection {
+  background: var(--film-accent);
+  color: var(--film-bg);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  line-height: 1;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum", "ss01";
+}
+
+.serif {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}

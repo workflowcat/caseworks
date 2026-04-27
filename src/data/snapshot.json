@@ -1,0 +1,585 @@
+{
+  "landscape": [
+    {
+      "id": "echr-merits",
+      "slug": "ukraine-and-netherlands-v-russia",
+      "forum": "echr",
+      "category": "state-responsibility",
+      "title": "Ukraine and the Netherlands v. Russia",
+      "parties": "Ukraine + Netherlands v. Russia",
+      "filed": "2014-03-13",
+      "filedDisplay": "First filing 13 March 2014; merits hearing 12 June 2024",
+      "decided": "2025-07-09",
+      "decidedDisplay": "Judgment 9 July 2025",
+      "status": "decided",
+      "citation": "Apps. nos. 8019/16, 43800/14, 28525/20, 11055/22",
+      "abstract": "The largest inter-state case in ECHR history. Four applications consolidated covering eastern Ukraine, the children abductions, MH17, and the full-scale invasion.",
+      "detail": [
+        "Unanimous violations under Articles 2, 3, 4 § 2, 5, 8, 9, 10, 11, 13, 14, and 38 of the Convention, and Articles 1 and 2 of Protocol No. 1.",
+        "Separate violations of Articles 2, 3, and 13 in respect of MH17 (app. 28525/20).",
+        "Just satisfaction adjourned. MH17 application disjoined for separate processing.",
+        "Article 46 measures: release of detainees pre-16 September 2022; cooperation in identifying transferred children."
+      ],
+      "outcome": "Russia found responsible for patterns of violations across eight years and four conflict phases.",
+      "url": "https://hudoc.echr.coe.int/fre?i=002-14493",
+      "related": [
+        "echr-crimea",
+        "icao-mh17",
+        "dutch-mh17"
+      ]
+    },
+    {
+      "id": "echr-crimea",
+      "slug": "ukraine-v-russia-re-crimea",
+      "forum": "echr",
+      "category": "state-responsibility",
+      "title": "Ukraine v. Russia (re Crimea)",
+      "parties": "Ukraine v. Russia",
+      "filed": "2014-03-13",
+      "filedDisplay": "Filed 13 March 2014; second app. 10 August 2018",
+      "decided": "2024-06-25",
+      "decidedDisplay": "Judgment 25 June 2024",
+      "status": "decided",
+      "citation": "Apps. nos. 20958/14 and 38334/18",
+      "abstract": "The companion inter-state case on the occupation and annexation of Crimea from February 2014.",
+      "detail": [
+        "Violations of Articles 2, 3, 5, 6, 7, 8, 9, 10, 11, 14, and 18 of the Convention.",
+        "Russian law could not be regarded as 'law' within the meaning of the Convention as imposed in occupied territory.",
+        "Decided unanimously."
+      ],
+      "outcome": "Russia found responsible for an administrative practice of violations in occupied Crimea.",
+      "url": "https://hudoc.echr.coe.int/eng?i=002-14347",
+      "related": [
+        "echr-merits"
+      ]
+    },
+    {
+      "id": "echr-pending",
+      "slug": "echr-pending-inter-state",
+      "forum": "echr",
+      "category": "state-responsibility",
+      "title": "Four pending Ukraine v. Russia inter-state applications",
+      "parties": "Ukraine v. Russia",
+      "filed": "2022-03-01",
+      "filedDisplay": "Various filings 2022 onwards",
+      "status": "pending",
+      "abstract": "Per ECHR PR 173 (2025), four further Ukraine v. Russia inter-state applications and approximately 9,500 individual applications remain pending, related to events in Crimea, eastern Ukraine, the Sea of Azov, and Russia's military operations from 24 February 2022.",
+      "detail": [
+        "The exact composition of the four pending applications is not enumerated in the public press release.",
+        "Approximately 9,500 individual applications relating to the conflict are also pending.",
+        "Russia's cessation as Contracting Party on 16 September 2022 limits the temporal scope to acts occurring up to that date."
+      ],
+      "outcome": "Pending. Future judgments expected; the Committee of Ministers continues to supervise execution of decided cases.",
+      "url": "https://www.echr.coe.int/w/grand-chamber-judgment-in-an-inter-state-case-1"
+    },
+    {
+      "id": "icj-genocide",
+      "slug": "icj-allegations-of-genocide",
+      "forum": "icj",
+      "category": "state-responsibility",
+      "title": "Allegations of Genocide under the Genocide Convention",
+      "parties": "Ukraine v. Russian Federation",
+      "filed": "2022-02-26",
+      "filedDisplay": "Application 26 February 2022",
+      "decided": "2024-02-02",
+      "decidedDisplay": "Provisional measures 16 March 2022; preliminary objections 2 February 2024",
+      "status": "pending",
+      "citation": "ICJ General List No. 182",
+      "abstract": "Ukraine seeks a declaration that it did not commit genocide in Donetsk and Luhansk, and challenges Russia's invocation of genocide as a justification for the use of force.",
+      "detail": [
+        "Provisional measures order, 16 March 2022: Russia ordered to suspend its military operations in Ukraine. Vote: 13–2.",
+        "Preliminary objections judgment, 2 February 2024: most Russian objections rejected; subject-matter jurisdiction over use-of-force claims declined 12–4.",
+        "Merits track on Ukraine's request for a declaration that no genocide occurred continues.",
+        "32 States have filed declarations of intervention."
+      ],
+      "outcome": "Pending on the merits. Russia has not complied with the provisional measures.",
+      "url": "https://www.icj-cij.org/case/182",
+      "related": [
+        "icj-icao-appeal"
+      ]
+    },
+    {
+      "id": "icj-icao-appeal",
+      "slug": "russia-v-icao-mh17",
+      "forum": "icj",
+      "category": "state-responsibility",
+      "title": "Appeal Relating to the Jurisdiction of the ICAO Council under Article 84 of the Chicago Convention",
+      "parties": "Russia v. Australia and the Netherlands",
+      "filed": "2025-09-01",
+      "filedDisplay": "Filed September 2025",
+      "status": "pending",
+      "abstract": "Russia's appeal of the ICAO Council's 12 May 2025 decision finding it breached Article 3 bis of the Chicago Convention by use of weapons against MH17.",
+      "detail": [
+        "Filed under Article 84 of the Chicago Convention in conjunction with Article 36(1) of the ICJ Statute.",
+        "Russia called the ICAO Council decision 'illegitimate' and refused to accept it.",
+        "Pending before the ICJ."
+      ],
+      "outcome": "Pending.",
+      "url": "https://www.icj-cij.org/",
+      "related": [
+        "icao-mh17"
+      ]
+    },
+    {
+      "id": "icc-ukraine",
+      "slug": "icc-situation-ukraine",
+      "forum": "icc",
+      "category": "individual-criminal",
+      "title": "Situation in Ukraine",
+      "parties": "Office of the Prosecutor v. multiple Russian officials",
+      "filed": "2014-04-25",
+      "filedDisplay": "Investigation opened 2 March 2022 (after 41 State referrals); jurisdiction backdates to 21 November 2013",
+      "status": "pending",
+      "abstract": "Ongoing ICC investigation into war crimes, crimes against humanity, and genocide on the territory of Ukraine.",
+      "detail": [
+        "17 March 2023: arrest warrants for Vladimir Putin and Maria Lvova-Belova for unlawful deportation and transfer of Ukrainian children. Rome Statute Articles 8(2)(a)(vii) and 8(2)(b)(viii).",
+        "5 March 2024: arrest warrants for Lieutenant General Sergei Kobylash and Admiral Viktor Sokolov for missile strikes on Ukrainian energy infrastructure.",
+        "24 June 2024: arrest warrants for former Defence Minister Sergei Shoigu and Chief of the General Staff Valery Gerasimov on the same conduct.",
+        "First ICC arrest warrant ever issued against the leader of a permanent member of the UN Security Council."
+      ],
+      "outcome": "Investigation ongoing. No arrests; Russia is not a State Party to the Rome Statute.",
+      "url": "https://www.icc-cpi.int/situations/ukraine"
+    },
+    {
+      "id": "icao-mh17",
+      "slug": "icao-council-mh17",
+      "forum": "icao",
+      "category": "state-responsibility",
+      "title": "MH17 — Article 84 Dispute before the ICAO Council",
+      "parties": "Australia and the Netherlands v. Russia",
+      "filed": "2022-03-14",
+      "filedDisplay": "Filed 14 March 2022",
+      "decided": "2025-05-12",
+      "decidedDisplay": "Council decision 12 May 2025",
+      "status": "decided",
+      "abstract": "First decision on the merits of an Article 84 dispute in the Council's 80-year history. Russia found to have breached Article 3 bis of the Chicago Convention.",
+      "detail": [
+        "Article 3 bis prohibits the use of weapons against civil aircraft in flight.",
+        "Vote: 22 in favour, 3 against, 10 abstentions.",
+        "Triggers binding reparations talks with the Netherlands and Australia.",
+        "Russia has appealed the decision to the ICJ."
+      ],
+      "outcome": "Russia found responsible. Russia rejected the decision and appealed to the ICJ.",
+      "url": "https://www.icao.int/news/icao-council-vote-flight-mh17-case",
+      "related": [
+        "echr-merits",
+        "dutch-mh17",
+        "icj-icao-appeal"
+      ]
+    },
+    {
+      "id": "itlos-naval",
+      "slug": "itlos-naval-vessels",
+      "forum": "itlos",
+      "category": "maritime-territory",
+      "title": "Detention of Three Ukrainian Naval Vessels",
+      "parties": "Ukraine v. Russian Federation",
+      "filed": "2019-04-16",
+      "filedDisplay": "Provisional-measures request 16 April 2019",
+      "decided": "2019-05-25",
+      "decidedDisplay": "Order on provisional measures 25 May 2019",
+      "status": "decided",
+      "citation": "ITLOS Case No. 26",
+      "abstract": "Following the Kerch Strait incident of 25 November 2018, Russia seized the Ukrainian naval vessels Berdyansk, Nikopol, and Yani Kapu and detained 24 servicemen. Ukraine instituted Annex VII proceedings; ITLOS handled provisional measures.",
+      "detail": [
+        "Vessels: Berdyansk, Nikopol, Yani Kapu. 24 detained Ukrainian crew members.",
+        "Order, 25 May 2019: Russia ordered to release the vessels and their crews. Vote: 19–1 on each measure.",
+        "Russia did not appear at the hearing; argued the dispute concerned military activities and was thus excluded under UNCLOS Article 298(1)(b).",
+        "Vessels and crew were subsequently returned. The Annex VII merits arbitration continued at the PCA."
+      ],
+      "outcome": "Russia complied (under continued international pressure) and released the vessels and crew.",
+      "url": "https://www.itlos.org/en/main/cases/list-of-cases/case-concerning-the-detention-of-three-ukrainian-naval-vessels-ukraine-v-russian-federation-provisional-measures/",
+      "related": [
+        "pca-naval"
+      ]
+    },
+    {
+      "id": "pca-coastal",
+      "slug": "pca-coastal-state-rights",
+      "forum": "pca",
+      "category": "maritime-territory",
+      "title": "Coastal State Rights in the Black Sea, Sea of Azov, and Kerch Strait",
+      "parties": "Ukraine v. Russian Federation",
+      "filed": "2016-09-16",
+      "filedDisplay": "Notification 16 September 2016",
+      "decided": "2020-02-21",
+      "decidedDisplay": "Award on preliminary objections 21 February 2020",
+      "status": "preliminary",
+      "citation": "PCA Case No. 2017-06",
+      "abstract": "UNCLOS Annex VII arbitration concerning Russia's interference with Ukrainian rights in the Black Sea, Sea of Azov, and Kerch Strait — including the seizure of subsoil resources, fishing rights, and obstruction of transit.",
+      "detail": [
+        "Tribunal constituted 29 November 2016.",
+        "Award on Russia's preliminary objections, 21 February 2020: jurisdictional challenges partially upheld and partially rejected.",
+        "Russia argued that questions of sovereignty over Crimea fell outside the Tribunal's UNCLOS jurisdiction.",
+        "Merits proceedings continue."
+      ],
+      "outcome": "Pending on the merits.",
+      "url": "https://pca-cpa.org/en/cases/149/"
+    },
+    {
+      "id": "pca-naval",
+      "slug": "pca-naval-vessels-merits",
+      "forum": "pca",
+      "category": "maritime-territory",
+      "title": "Detention of Ukrainian Naval Vessels and Servicemen — Annex VII Merits",
+      "parties": "Ukraine v. Russian Federation",
+      "filed": "2019-04-01",
+      "filedDisplay": "Notice of arbitration April 2019",
+      "decided": "2022-06-27",
+      "decidedDisplay": "Award on preliminary objections 27 June 2022",
+      "status": "preliminary",
+      "abstract": "The Annex VII tribunal merits proceedings on the Kerch Strait incident, following ITLOS provisional measures.",
+      "detail": [
+        "Russia raised preliminary objections on military-activities and law-enforcement exemptions under UNCLOS Article 298.",
+        "Award on Preliminary Objections, 27 June 2022, partially upheld jurisdiction.",
+        "Merits phase continues."
+      ],
+      "outcome": "Pending on the merits.",
+      "url": "https://pca-cpa.org/en/news/publication-of-award-on-the-preliminary-objections-of-the-russian-federation-in-arbitration-concerning-the-detention-of-ukrainian-naval-vessels-and-servicemen/",
+      "related": [
+        "itlos-naval"
+      ]
+    },
+    {
+      "id": "dutch-mh17",
+      "slug": "dutch-mh17-criminal",
+      "forum": "dutch",
+      "category": "individual-criminal",
+      "title": "MH17 Criminal Trial",
+      "parties": "Netherlands Public Prosecution Service v. Girkin and others",
+      "filed": "2020-03-09",
+      "filedDisplay": "Trial opened 9 March 2020",
+      "decided": "2022-11-17",
+      "decidedDisplay": "Verdict 17 November 2022",
+      "status": "decided",
+      "abstract": "Trial of four named suspects for the downing of MH17 on 17 July 2014. Held at the Schiphol Judicial Complex (JCS), Badhoevedorp, by the District Court of The Hague.",
+      "detail": [
+        "Convicted in absentia, life imprisonment: Igor Girkin, Sergey Dubinskiy, Leonid Kharchenko.",
+        "Acquitted: Oleg Pulatov (the only defendant represented in court).",
+        "Court found that MH17 was hit by a Buk missile fired from a farm field near Pervomaiskyi, Ukraine.",
+        "The Joint Investigation Team (Netherlands, Australia, Belgium, Malaysia, Ukraine) underpinned the prosecution."
+      ],
+      "outcome": "Three convictions in absentia. Verdict final.",
+      "url": "https://www.courtmh17.com/en/judgement-and-livestream/verdict-17-november-2022.htm",
+      "related": [
+        "echr-merits",
+        "icao-mh17"
+      ]
+    },
+    {
+      "id": "naftogaz-pca",
+      "slug": "naftogaz-v-russia-pca",
+      "forum": "pca",
+      "category": "property-commerce",
+      "title": "Naftogaz and others v. Russia",
+      "parties": "NJSC Naftogaz of Ukraine and 6 group companies v. Russia",
+      "filed": "2016-10-01",
+      "filedDisplay": "Notice of arbitration October 2016",
+      "decided": "2023-04-12",
+      "decidedDisplay": "Final award on quantum 12 April 2023",
+      "status": "decided",
+      "citation": "PCA Case No. 2017-16",
+      "abstract": "UNCITRAL/PCA arbitration under the Russia–Ukraine BIT (1998) for the unlawful expropriation of Naftogaz's Crimean oil-and-gas assets following the 2014 annexation. The largest Crimea-related award against Russia.",
+      "detail": [
+        "February 2019 jurisdictional ruling: tribunal upheld jurisdiction over Crimean assets and found Russia in breach of the BIT.",
+        "Final award on quantum, 12 April 2023: approximately USD 5 billion in damages and interest.",
+        "Enforcement orders obtained in the United Kingdom (5 December 2023), France, Austria, the Netherlands, and the United States.",
+        "Russia has refused to pay voluntarily; Naftogaz has been attaching frozen Russian assets in multiple jurisdictions."
+      ],
+      "outcome": "Russia found liable for ~$5 billion. Enforcement under way; partial collection.",
+      "url": "https://jusmundi.com/en/document/decision/en-njsc-naftogaz-of-ukraine-pjsc-state-joint-stock-company-chornomornaftogaz-pjsc-ukrgasvydobuvannya-and-others-v-the-russian-federation-proceedings-on-quantum",
+      "awardUsdM": 5000,
+      "enforcementNote": "Recognition orders in UK/FR/AT/NL/US; partial attachment of frozen Russian state assets.",
+      "related": [
+        "echr-crimea",
+        "scc-naftogaz-gazprom"
+      ]
+    },
+    {
+      "id": "oschadbank",
+      "slug": "oschadbank-v-russia",
+      "forum": "pca",
+      "category": "property-commerce",
+      "title": "Oschadbank v. Russia",
+      "parties": "Joint Stock Company State Savings Bank of Ukraine v. Russia",
+      "filed": "2016-01-01",
+      "filedDisplay": "Notice of arbitration 2016",
+      "decided": "2018-11-26",
+      "decidedDisplay": "Final award 26 November 2018",
+      "status": "decided",
+      "abstract": "UNCITRAL arbitration seated in Paris under the Russia–Ukraine BIT for the expropriation of Oschadbank's Crimean banking infrastructure.",
+      "detail": [
+        "Final award, 26 November 2018: approximately USD 1.1 billion in damages, plus interest, bringing total claims above USD 1.3 billion.",
+        "Paris Court of Appeal upheld the award on 1 July 2025, dismissing Russian challenges to arbitrator independence.",
+        "Oschadbank has separately filed new arbitration claims for assets seized in four further regions following the 2022 invasion."
+      ],
+      "outcome": "Russia found liable for ~$1.3 billion (with interest). Award upheld on appeal in France.",
+      "url": "https://investmentpolicy.unctad.org/investment-dispute-settlement/cases/724/oschadbank-v-russia",
+      "awardUsdM": 1300,
+      "enforcementNote": "Award upheld by Paris Court of Appeal, July 2025.",
+      "related": [
+        "echr-crimea"
+      ]
+    },
+    {
+      "id": "everest",
+      "slug": "everest-estate-v-russia",
+      "forum": "pca",
+      "category": "property-commerce",
+      "title": "Everest Estate LLC and others v. Russia",
+      "parties": "Everest Estate LLC and 18 other Ukrainian investors (Privat Group) v. Russia",
+      "filed": "2015-06-01",
+      "filedDisplay": "Notice of arbitration June 2015",
+      "decided": "2018-05-02",
+      "decidedDisplay": "Final award 2 May 2018",
+      "status": "decided",
+      "abstract": "PCA-administered UNCITRAL arbitration concerning the expropriation of Crimean real-estate holdings owned by the Privat Group of Ukrainian investors.",
+      "detail": [
+        "Final award, 2 May 2018: approximately USD 139–150 million in damages, fees, and costs.",
+        "First award on the merits in the Crimean BIT-arbitration cluster.",
+        "Set-aside proceedings in the Dutch courts (the seat) ultimately upheld the award."
+      ],
+      "outcome": "Russia found liable for ~$150 million. Enforcement pursued in multiple jurisdictions.",
+      "url": "https://www.refworld.org/docid/5b728d564.html",
+      "awardUsdM": 150,
+      "enforcementNote": "Set-aside proceedings unsuccessful in the Netherlands.",
+      "related": [
+        "naftogaz-pca",
+        "oschadbank"
+      ]
+    },
+    {
+      "id": "stabil",
+      "slug": "stabil-v-russia",
+      "forum": "pca",
+      "category": "property-commerce",
+      "title": "Stabil and others v. Russia",
+      "parties": "Stabil LLC, Crimea Petrol LLC, Elefteria LLC, Novel Estate LLC and others v. Russia",
+      "filed": "2015-06-15",
+      "filedDisplay": "Notice of arbitration 15 June 2015",
+      "decided": "2019-04-12",
+      "decidedDisplay": "Final award 12 April 2019",
+      "status": "decided",
+      "abstract": "PCA-administered arbitration under the Russia–Ukraine BIT for the expropriation of petrol stations and related operations in Crimea.",
+      "detail": [
+        "26 June 2017 jurisdictional ruling (issued in parallel with PJSC Ukrnafta v Russia): the BIT applied to annexed Crimea and Russia was responsible for the protection of the investors' Crimean investments.",
+        "Final award, 12 April 2019: approximately USD 34.5 million in damages."
+      ],
+      "outcome": "Russia found liable for ~$34.5 million across the petrol-station claimant group.",
+      "url": "https://jusmundi.com/en/document/decision/en-stabil-llc-crimea-petrol-llc-elefteria-llc-novel-estate-llc-and-others-v-the-russian-federation-award-friday-12th-april-2019",
+      "awardUsdM": 34.5,
+      "related": [
+        "ukrnafta",
+        "everest"
+      ]
+    },
+    {
+      "id": "ukrnafta",
+      "slug": "ukrnafta-v-russia",
+      "forum": "pca",
+      "category": "property-commerce",
+      "title": "PJSC Ukrnafta v. Russia",
+      "parties": "Public Joint Stock Company Ukrnafta v. Russia",
+      "filed": "2015-06-01",
+      "filedDisplay": "Notice of arbitration June 2015",
+      "decided": "2019-04-12",
+      "decidedDisplay": "Final award 12 April 2019",
+      "status": "decided",
+      "abstract": "PCA-administered UNCITRAL arbitration under the Russia–Ukraine BIT for the expropriation of Ukrnafta's petrol-station network in Crimea.",
+      "detail": [
+        "26 June 2017: tribunal held that the Russia–Ukraine BIT applied to annexed Crimea and that Russia was responsible for protecting the investments.",
+        "Final award, 12 April 2019: approximately USD 55 million in damages."
+      ],
+      "outcome": "Russia found liable for ~$55 million.",
+      "url": "https://www.iisd.org/itn/2023/07/01/pca-tribunal-finds-that-russia-committed-an-illegal-expropriation-against-ukrainian-bank/",
+      "awardUsdM": 55,
+      "related": [
+        "stabil"
+      ]
+    },
+    {
+      "id": "privatbank",
+      "slug": "privatbank-v-russia",
+      "forum": "pca",
+      "category": "property-commerce",
+      "title": "PrivatBank and Finilon v. Russia",
+      "parties": "PJSC CB PrivatBank and Finance Company Finilon LLC v. Russia",
+      "filed": "2015-04-01",
+      "filedDisplay": "Notice of arbitration 2015",
+      "decided": "2019-02-04",
+      "decidedDisplay": "Partial award (jurisdiction & liability) 4 February 2019",
+      "status": "preliminary",
+      "citation": "PCA Case No. 2015-21",
+      "abstract": "UNCITRAL arbitration under the Russia–Ukraine BIT for the alleged expropriation of PrivatBank's Crimean banking infrastructure, including a major ATM network and real-estate assets.",
+      "detail": [
+        "Partial Award, 4 February 2019: tribunal upheld jurisdiction and found that Russia had breached Article 5 of the BIT (expropriation).",
+        "Quantum reserved for a later phase of the proceedings.",
+        "Underlying claim cited approximately USD 1 billion in invested capital and ~USD 200 million in directly seized assets.",
+        "Set-aside proceedings in the Dutch courts."
+      ],
+      "outcome": "Liability established. Quantum decision pending.",
+      "url": "https://investmentpolicy.unctad.org/investment-dispute-settlement/cases/649/privatbank-and-finilon-v-russia",
+      "related": [
+        "everest",
+        "naftogaz-pca"
+      ]
+    },
+    {
+      "id": "scc-naftogaz-gazprom",
+      "slug": "naftogaz-v-gazprom-scc",
+      "forum": "scc",
+      "category": "property-commerce",
+      "title": "Naftogaz v. Gazprom — gas supply & transit",
+      "parties": "NJSC Naftogaz of Ukraine v. PJSC Gazprom",
+      "filed": "2014-06-01",
+      "filedDisplay": "Filings 2014",
+      "decided": "2018-02-28",
+      "decidedDisplay": "Gas Sales final award 22 December 2017; Transit final award 28 February 2018",
+      "status": "decided",
+      "citation": "SCC Arbitration nos. V2014-078-080 and V2014-129",
+      "abstract": "Two parallel commercial arbitrations at the Stockholm Chamber of Commerce on the gas-supply and gas-transit contracts between Ukraine's state energy company and Gazprom.",
+      "detail": [
+        "Gas Sales arbitration (V2014-078-080): final award 22 December 2017 — Naftogaz ordered to pay Gazprom for unbought volumes; some contract clauses revised in Naftogaz's favour.",
+        "Gas Transit arbitration (V2014-129): final award 28 February 2018 — Gazprom ordered to pay USD 4.63 billion for breaching its minimum transit obligations.",
+        "After netting, Gazprom owed Naftogaz approximately USD 2.56 billion.",
+        "The Svea Court of Appeal in Sweden has dismissed multiple Russian challenges to the awards."
+      ],
+      "outcome": "Net award of ~$2.56 billion to Naftogaz. The first major commercial-arbitration win against a Russian state-owned entity from this conflict.",
+      "url": "https://www.naftogaz.com/en/news/naftogaz-vygrav-u-gazpromu-arbitrazh-schodo-tranzytu-gazprom-zaplatyt-naftogazu-2-56-mlrd-dol",
+      "awardUsdM": 2560,
+      "enforcementNote": "Partial enforcement; followed by attachments of Gazprom assets in Europe.",
+      "related": [
+        "naftogaz-pca"
+      ]
+    },
+    {
+      "id": "coe-register",
+      "slug": "register-of-damage",
+      "forum": "coe",
+      "category": "reparations",
+      "title": "Register of Damage for Ukraine",
+      "parties": "Council of Europe (43 participating States and Ukraine)",
+      "filed": "2023-05-12",
+      "filedDisplay": "Established 12 May 2023; announced Reykjavik Summit 17 May 2023",
+      "status": "pending",
+      "abstract": "Records claims for damage, loss, or injury caused by Russia's internationally wrongful acts on or after 24 February 2022. First component of a planned three-part compensation mechanism.",
+      "detail": [
+        "Resolution CM/Res(2023)3, Enlarged Partial Agreement.",
+        "Headquartered in The Hague.",
+        "Over 80,000 claims received.",
+        "Architecture: (1) Register; (2) International Claims Commission [planned]; (3) Compensation Fund [planned]."
+      ],
+      "outcome": "Operational. Future compensation mechanism under negotiation.",
+      "url": "https://www.coe.int/en/web/human-rights-rule-of-law/register-of-damage-for-ukraine",
+      "related": [
+        "echr-merits"
+      ]
+    }
+  ],
+  "categoryLabels": {
+    "state-responsibility": "State responsibility",
+    "individual-criminal": "Individual criminal",
+    "property-commerce": "Property & commerce",
+    "maritime-territory": "Maritime & territory",
+    "reparations": "Reparations & enforcement"
+  },
+  "categoryDeck": {
+    "state-responsibility": "Holds State A responsible for State B's conduct under treaty law.",
+    "individual-criminal": "Holds named individuals criminally liable for international crimes.",
+    "property-commerce": "Money damages for expropriation under bilateral investment treaties and commercial contracts.",
+    "maritime-territory": "Sovereignty-of-the-sea regime: vessel detention, coastal rights, transit.",
+    "reparations": "Mechanisms designed to convert findings into actual compensation."
+  },
+  "forums": [
+    {
+      "id": "echr",
+      "short": "ECHR",
+      "full": "European Court of Human Rights",
+      "city": "Strasbourg",
+      "country": "France",
+      "lat": 48.5835,
+      "lon": 7.7745,
+      "remit": "Inter-state and individual applications under the European Convention on Human Rights."
+    },
+    {
+      "id": "icj",
+      "short": "ICJ",
+      "full": "International Court of Justice",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "lat": 52.0867,
+      "lon": 4.295,
+      "remit": "Disputes between States. Sits at the Peace Palace."
+    },
+    {
+      "id": "icc",
+      "short": "ICC",
+      "full": "International Criminal Court",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "lat": 52.1086,
+      "lon": 4.2828,
+      "remit": "Individual criminal responsibility for the most serious crimes of international concern."
+    },
+    {
+      "id": "icao",
+      "short": "ICAO",
+      "full": "International Civil Aviation Organization",
+      "city": "Montréal",
+      "country": "Canada",
+      "lat": 45.5017,
+      "lon": -73.5673,
+      "remit": "UN agency on civil aviation. Council adjudicates Article 84 disputes under the Chicago Convention."
+    },
+    {
+      "id": "itlos",
+      "short": "ITLOS",
+      "full": "International Tribunal for the Law of the Sea",
+      "city": "Hamburg",
+      "country": "Germany",
+      "lat": 53.5547,
+      "lon": 9.9818,
+      "remit": "Disputes under UNCLOS. Hears provisional-measures requests where the Annex VII tribunal is not yet constituted."
+    },
+    {
+      "id": "pca",
+      "short": "PCA",
+      "full": "Permanent Court of Arbitration",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "lat": 52.0867,
+      "lon": 4.295,
+      "remit": "Acts as registry for inter-state arbitrations, including UNCLOS Annex VII tribunals."
+    },
+    {
+      "id": "dutch",
+      "short": "Hague Dist.",
+      "full": "District Court of The Hague",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "lat": 52.0801,
+      "lon": 4.2911,
+      "remit": "Dutch national court of first instance; tried the MH17 criminal case at Schiphol JCS."
+    },
+    {
+      "id": "coe",
+      "short": "CoE",
+      "full": "Council of Europe — Register of Damage for Ukraine",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "lat": 52.0801,
+      "lon": 4.2911,
+      "remit": "Records claims for damage caused by Russia's internationally wrongful acts since 24 February 2022. Registry in The Hague; Council of Europe seat in Strasbourg."
+    },
+    {
+      "id": "scc",
+      "short": "SCC",
+      "full": "Arbitration Institute of the Stockholm Chamber of Commerce",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "lat": 59.3293,
+      "lon": 18.0686,
+      "remit": "Administers commercial arbitrations seated in Stockholm — including the Naftogaz–Gazprom gas-supply and transit disputes."
+    }
+  ]
+}
