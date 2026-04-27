@@ -65,6 +65,27 @@ const concepts = [
     deck: "Russia as the subject of one big poster.",
     vibe: "Punk. Headline-grade. Big numbers, big type.",
   },
+  {
+    href: "/registers",
+    no: "10",
+    name: "Registers",
+    deck: "The same fact rendered in six voices on the public record.",
+    vibe: "Parallel-text. Lateral. The differences are the content.",
+  },
+  {
+    href: "/voices",
+    no: "11",
+    name: "Voices",
+    deck: "Forty pages, one quotation each. No commentary, no chart.",
+    vibe: "Slow. Typographic. The words breathing on their own.",
+  },
+  {
+    href: "/cards",
+    no: "12",
+    name: "Cards",
+    deck: "Every fact rendered as a single index card. Sortable, atomic.",
+    vibe: "Tactile. Reader-driven. Make your own argument.",
+  },
 ] as const;
 
 export default function Home() {
@@ -74,7 +95,7 @@ export default function Home() {
         <div>
           <p className="serif text-2xl tracking-tight">caseworks</p>
           <p className="label text-ink-soft mt-2">
-            Nine views of the same record
+            Twelve views of the same record
           </p>
         </div>
         <p className="mono text-xs text-ink-soft hidden md:block">
@@ -86,12 +107,12 @@ export default function Home() {
         <h1 className="serif text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight max-w-5xl">
           The Ukraine–Russia legal landscape,
           <br />
-          <span className="italic text-ink-soft">nine ways.</span>
+          <span className="italic text-ink-soft">twelve ways.</span>
         </h1>
         <p className="mt-10 max-w-2xl text-lg leading-snug text-ink-soft">
-          Same case data. Nine radically different surfaces. Each commits
-          fully to its own visual logic — pick the one that lets you see
-          what you came to see.
+          Same case data. Twelve radically different surfaces. Each
+          commits fully to its own visual logic — pick the one that lets
+          you see what you came to see.
         </p>
 
         <ol className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border-y border-rule">
