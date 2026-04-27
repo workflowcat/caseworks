@@ -23,6 +23,48 @@ const concepts = [
     deck: "Eleven years on a horizontal scroll. Conflict and law on the same axis.",
     vibe: "Cinematic. Scroll-driven. Time as the only dimension.",
   },
+  {
+    href: "/pleadings",
+    no: "04",
+    name: "Pleadings",
+    deck: "A forensic dossier on MH17. Five forums. One missile.",
+    vibe: "Evidentiary. Diagrammatic. The exhibit annex.",
+  },
+  {
+    href: "/witness",
+    no: "05",
+    name: "Witness",
+    deck: "What eleven years of waiting looks like, in the second person.",
+    vibe: "Intimate. Editorial. One human's path through the system.",
+  },
+  {
+    href: "/specimens",
+    no: "06",
+    name: "Specimens",
+    deck: "Each case as a hand-drawn organic specimen. Pinned to a plate.",
+    vibe: "Slow. Crafted. A drawer of plants, not a dashboard.",
+  },
+  {
+    href: "/mirror",
+    no: "07",
+    name: "Mirror",
+    deck: "Courtroom on the left, the ground on the right. Same time axis.",
+    vibe: "Restrained. Structural. The simultaneity is the argument.",
+  },
+  {
+    href: "/treaty",
+    no: "08",
+    name: "Treaty Atlas",
+    deck: "Cases mapped to the legal instruments they invoke.",
+    vibe: "Bipartite. Networked. Hover to see the spokes.",
+  },
+  {
+    href: "/defendant",
+    no: "09",
+    name: "Defendant",
+    deck: "Russia as the subject of one big poster.",
+    vibe: "Punk. Headline-grade. Big numbers, big type.",
+  },
 ] as const;
 
 export default function Home() {
@@ -32,7 +74,7 @@ export default function Home() {
         <div>
           <p className="serif text-2xl tracking-tight">caseworks</p>
           <p className="label text-ink-soft mt-2">
-            Three views of the same record
+            Nine views of the same record
           </p>
         </div>
         <p className="mono text-xs text-ink-soft hidden md:block">
@@ -44,28 +86,28 @@ export default function Home() {
         <h1 className="serif text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight max-w-5xl">
           The Ukraine–Russia legal landscape,
           <br />
-          <span className="italic text-ink-soft">three ways.</span>
+          <span className="italic text-ink-soft">nine ways.</span>
         </h1>
         <p className="mt-10 max-w-2xl text-lg leading-snug text-ink-soft">
-          Same case data. Three radically different surfaces. Each commits
+          Same case data. Nine radically different surfaces. Each commits
           fully to its own visual logic — pick the one that lets you see
           what you came to see.
         </p>
 
-        <ol className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-px bg-rule border-y border-rule">
+        <ol className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border-y border-rule">
           {concepts.map((c) => (
             <li key={c.href} className="bg-bg">
               <Link
                 href={c.href}
-                className="block p-10 lg:p-14 h-full hover:bg-bg-2 transition-colors group"
+                className="block p-8 lg:p-10 h-full hover:bg-bg-2 transition-colors group"
               >
                 <p className="mono text-xs text-accent">{c.no}</p>
-                <h2 className="serif text-5xl tracking-tight mt-6 group-hover:text-accent transition-colors">
+                <h2 className="serif text-4xl tracking-tight mt-5 group-hover:text-accent transition-colors">
                   {c.name}
                 </h2>
-                <p className="mt-6 text-base leading-relaxed">{c.deck}</p>
-                <p className="mt-4 italic text-sm text-ink-soft">{c.vibe}</p>
-                <p className="mt-12 mono text-xs text-accent inline-block">
+                <p className="mt-5 text-base leading-relaxed">{c.deck}</p>
+                <p className="mt-3 italic text-sm text-ink-soft">{c.vibe}</p>
+                <p className="mt-10 mono text-xs text-accent inline-block">
                   Open ↗
                 </p>
               </Link>
