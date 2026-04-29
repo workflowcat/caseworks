@@ -132,10 +132,10 @@ export default function VerifyPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="XI" title="Verify" current="/verify" />
+      <PageHeader no="X" title="Verify" current="/verify" />
 
       <PageTitle
-        kicker="XI · Verify"
+        kicker="X · Verify"
         title="Every claim, in one table."
         deck="A working surface for fact-checkers and copy editors. Each row is a single claim from elsewhere on the site, with its confidence level, source, and a link to the source and the on-site permalink."
       >

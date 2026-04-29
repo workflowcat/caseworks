@@ -8,6 +8,9 @@ import {
 import { SectionRail } from "@/components/section-rail";
 import { sections } from "@/data/judgment-sections";
 import { SourceLine } from "@/components/source-link";
+import { ParagraphChips } from "@/components/paragraph-chip";
+import { SECTION_PARAGRAPHS } from "@/data/paragraphs";
+import { GlossaryProse } from "@/components/glossary-link";
 
 export const metadata = { title: "III — Annotated judgment · A Reader" };
 
@@ -90,11 +93,16 @@ export default function JudgmentPage() {
                   <p className="mono text-xs text-accent">{s.number}</p>
                 </div>
                 <div className="col-span-12 lg:col-span-10 space-y-5">
-                  <h2 className="serif text-2xl tracking-tight leading-tight">
-                    {s.heading}
-                  </h2>
+                  <div className="flex flex-wrap items-baseline gap-3">
+                    <h2 className="serif text-2xl tracking-tight leading-tight">
+                      {s.heading}
+                    </h2>
+                    <ParagraphChips
+                      list={SECTION_PARAGRAPHS[s.id] ?? []}
+                    />
+                  </div>
                   <p className="text-[1.05rem] leading-[1.65] max-w-3xl">
-                    {s.body}
+                    <GlossaryProse text={s.body} />
                   </p>
                   {s.pulls?.map((p, i) => (
                     <blockquote

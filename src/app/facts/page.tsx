@@ -12,6 +12,7 @@ import { DistBar } from "@/components/dist-bar";
 import { SourceLine } from "@/components/source-link";
 import { ConfidenceBadge } from "@/components/confidence-badge";
 import { FACT_CONFIDENCE } from "@/data/confidence";
+import { GlossaryProse } from "@/components/glossary-link";
 
 export default function FactsPage() {
   const [query, setQuery] = useState("");
@@ -59,10 +60,10 @@ export default function FactsPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VI" title="Facts" current="/facts" />
+      <PageHeader no="V" title="Facts" current="/facts" />
 
       <PageTitle
-        kicker="VI · Facts"
+        kicker="V · Facts"
         title="Atomic, sourced."
         deck="Each fact is one claim, with its primary source and date. Filter, sort, search; copy any fact with its citation."
       >
@@ -175,7 +176,7 @@ export default function FactsPage() {
                 </p>
                 <div className="col-span-10 md:col-span-11 space-y-2">
                   <p className="serif text-base lg:text-lg leading-snug max-w-3xl">
-                    {f.text}
+                    <GlossaryProse text={f.text} />
                   </p>
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mono text-[11px]">
                     <span className="uppercase tracking-widest text-accent">

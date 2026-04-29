@@ -7,6 +7,7 @@ import {
 import { ProceduralGantt } from "@/components/gantt";
 import { procedural } from "@/data/procedural";
 import { SourceLine } from "@/components/source-link";
+import { GlossaryProse } from "@/components/glossary-link";
 
 export const metadata = { title: "II — Procedural history · A Reader" };
 
@@ -65,7 +66,9 @@ export default function HistoryPage() {
                 <h3 className="serif text-xl tracking-tight leading-tight">
                   {s.title}
                 </h3>
-                <p className="text-base leading-relaxed">{s.body}</p>
+                <p className="text-base leading-relaxed">
+                  <GlossaryProse text={s.body} />
+                </p>
                 <p className="mono text-[11px] text-ink-soft">
                   Source: <SourceLine source={s.source} />
                 </p>

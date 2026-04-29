@@ -38,14 +38,6 @@ export const sections: Section[] = [
   },
   {
     no: "IV",
-    href: "/witness",
-    title: "A reading",
-    short: "Reading",
-    one: "Six chapters on the case told from the perspective of one of the more than five hundred MH17 relatives who lodged individual ECHR applications.",
-    kind: "reading",
-  },
-  {
-    no: "V",
     href: "/quotations",
     title: "Quotations",
     short: "Quotes",
@@ -53,7 +45,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "VI",
+    no: "V",
     href: "/facts",
     title: "Facts",
     short: "Facts",
@@ -61,7 +53,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "VII",
+    no: "VI",
     href: "/registers",
     title: "Voices on the record",
     short: "Voices",
@@ -69,7 +61,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "VIII",
+    no: "VII",
     href: "/glossary",
     title: "Glossary",
     short: "Glossary",
@@ -77,7 +69,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "IX",
+    no: "VIII",
     href: "/sources",
     title: "Sources",
     short: "Sources",
@@ -85,7 +77,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "X",
+    no: "IX",
     href: "/reading-list",
     title: "Reading list",
     short: "Reading list",
@@ -93,7 +85,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "XI",
+    no: "X",
     href: "/verify",
     title: "Verify",
     short: "Verify",

@@ -12,6 +12,8 @@ import { DistBar } from "@/components/dist-bar";
 import { SourceLine } from "@/components/source-link";
 import { ConfidenceBadge } from "@/components/confidence-badge";
 import { QUOTE_CONFIDENCE } from "@/data/confidence";
+import { ParagraphChips } from "@/components/paragraph-chip";
+import { QUOTE_PARAGRAPHS } from "@/data/paragraphs";
 
 export default function QuotationsPage() {
   const [query, setQuery] = useState("");
@@ -43,10 +45,10 @@ export default function QuotationsPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="V" title="Quotations" current="/quotations" />
+      <PageHeader no="IV" title="Quotations" current="/quotations" />
 
       <PageTitle
-        kicker="V · Quotations"
+        kicker="IV · Quotations"
         title="On the record."
         deck="Each quotation is reproduced verbatim where possible. Where compression was necessary, that is marked. Press the copy button on any entry to put a formatted citation on your clipboard."
       >
@@ -145,6 +147,7 @@ export default function QuotationsPage() {
                     <ConfidenceBadge
                       c={QUOTE_CONFIDENCE[q.id] ?? "verbatim"}
                     />
+                    <ParagraphChips list={QUOTE_PARAGRAPHS[q.id] ?? []} />
                   </div>
                   {q.context ? (
                     <p className="serif italic text-sm text-ink-soft">

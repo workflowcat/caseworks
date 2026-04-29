@@ -20,10 +20,10 @@ const VOICE_LABEL: Record<string, string> = {
 export default function RegistersPage() {
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VII" title="Voices on the record" current="/registers" />
+      <PageHeader no="VI" title="Voices on the record" current="/registers" />
 
       <PageTitle
-        kicker="VII · Voices on the record"
+        kicker="VI · Voices on the record"
         title="The same fact, six voices."
         deck="The court's register is not the applicant's register is not the respondent's register is not the academic's. Three event-bundles, six panels each."
       >

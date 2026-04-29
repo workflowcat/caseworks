@@ -71,10 +71,10 @@ export default function ReadingListPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="X" title="Reading list" current="/reading-list" />
+      <PageHeader no="IX" title="Reading list" current="/reading-list" />
 
       <PageTitle
-        kicker="X · Reading list"
+        kicker="IX · Reading list"
         title="External material, curated."
         deck="Primary documents and the secondary commentary that earns its place. Filter by depth or kind; copy any citation; follow any link."
       >
