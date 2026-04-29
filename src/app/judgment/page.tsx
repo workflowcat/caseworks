@@ -30,10 +30,21 @@ export default function JudgmentPage() {
         title="The Grand Chamber, on the record."
         deck="A working reading of the public press release that summarises the merits judgment of 9 July 2025, focused on the parts that controlled application 28525/20."
       >
+        <p className="mono text-[11px] text-ink-soft border border-rule px-3 py-2 inline-block mb-3">
+          For the paragraph-by-paragraph view drawn from the full HUDOC
+          PDF (1,429 paragraphs + 24 operative orders),{" "}
+          <a
+            href="/judgment/paragraphs"
+            className="underline decoration-accent decoration-1 underline-offset-2"
+          >
+            open the paragraphs index
+          </a>
+          .
+        </p>
         <p className="text-base leading-relaxed">
           The full judgment is available on{" "}
           <a
-            href="https://hudoc.echr.coe.int/fre?i=002-14493"
+            href="https://hudoc.echr.coe.int/eng#%7B%22tabview%22:%5B%22document%22%5D,%22itemid%22:%5B%22001-244292%22%5D%7D"
             className="underline decoration-accent decoration-1 underline-offset-2"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,9 +60,9 @@ export default function JudgmentPage() {
           >
             ECHR 173 (2025)
           </a>
-          {" "}— is the source for the text below. Pull quotes are
-          reproduced verbatim. Full HUDOC paragraph anchors are not yet
-          surfaced on this site.
+          {" "}— is the source for the section text below. Pull quotes
+          are reproduced verbatim and now carry HUDOC paragraph anchors
+          drawn from the full PDF.
         </p>
       </PageTitle>
 

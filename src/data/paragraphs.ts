@@ -20,16 +20,16 @@ export type ParaAnchor = {
 export const QUOTE_PARAGRAPHS: Record<string, ParaAnchor[]> = {
   "court-flagrant": [
     {
-      no: "348–349",
+      no: 348,
       topic: "Threat to peace in Europe; near universal condemnation",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-strategically": [
     {
-      no: "360–361",
+      no: 360,
       topic: "Personal jurisdiction; territorial acquisition",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-not-lawful": [
@@ -37,74 +37,70 @@ export const QUOTE_PARAGRAPHS: Record<string, ParaAnchor[]> = {
       no: 461,
       topic:
         "MH17 — IHL principles of distinction and precautions; not a lawful act of war",
-      derivedFrom: "Web search corroboration · 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-cavalier": [
     {
-      no: "458–461",
+      no: 461,
       topic: "MH17 — Buk-TELAR deployment; failure to take measures",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-fabrication": [
     {
-      no: "470–478",
+      no: 488,
       topic: "MH17 — failure to investigate; Russian disclosures",
-      derivedFrom: "Editor's inference from PR 173 (2025) section",
-      approx: true,
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-bodies": [
     {
-      no: "488–500",
+      no: "488–510",
       topic: "MH17 — suffering of next of kin under Article 3",
-      derivedFrom: "Editor's inference from PR 173 (2025) section",
-      approx: true,
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-fanciful": [
     {
-      no: "501–510",
+      no: 509,
       topic: "Article 13 — no effective remedy in Russia",
-      derivedFrom: "Editor's inference from PR 173 (2025) section",
-      approx: true,
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-pattern": [
     {
-      no: "757–762",
+      no: 757,
       topic: "Pattern or system of violations; burden of proof",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-eight-years": [
     {
       no: "757–762",
       topic: "Official tolerance; eight-year pattern",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-deplorable": [
     {
-      no: "177–179",
+      no: 177,
       topic: "Article 38; values framework; Russia's non-participation",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-context": [
     {
-      no: "177–179",
+      no: 177,
       topic: "Russia's actions unprecedented in CoE history",
-      derivedFrom: "Milanović, EJIL:Talk! 10 July 2025",
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
   "court-jurisdiction-from": [
     {
-      no: "320–340",
+      no: 348,
       topic: "Spatial jurisdiction over separatist territory",
-      derivedFrom: "Editor's inference from admissibility decision",
-      approx: true,
+      derivedFrom: "HUDOC merits judgment, item 001-244292",
     },
   ],
 };
