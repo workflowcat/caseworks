@@ -1,6 +1,11 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { terms } from "@/data/glossary";
+import { HoverPreview } from "./hover-preview";
+
+const TERM_BY_ID: Map<string, (typeof terms)[number]> = new Map(
+  terms.map((t) => [t.id, t]),
+);
 
 // Build an ordered list of (regex, term) pairs once, longest match first so
 // "Buk-TELAR" beats "Buk".
@@ -139,15 +144,27 @@ function linkifyOutsideQuotes(
     }
     const before = s.slice(cursor, cursor + earliest.idx);
     if (before) out.push(before);
+    const term = TERM_BY_ID.get(earliest.id);
     out.push(
-      <Link
+      <HoverPreview
         key={`${baseKey}-${kk++}`}
-        href={`/glossary#${earliest.id}`}
-        className="underline decoration-dotted decoration-1 underline-offset-2 hover:text-accent"
-        title="Open glossary entry"
-      >
-        {earliest.matchText}
-      </Link>,
+        trigger={
+          <Link
+            href={`/glossary#${earliest.id}`}
+            className="underline decoration-dotted decoration-1 underline-offset-2 hover:text-accent"
+          >
+            {earliest.matchText}
+          </Link>
+        }
+        title={term?.term ?? earliest.matchText}
+        body={
+          term
+            ? term.body.slice(0, 220) +
+              (term.body.length > 220 ? "…" : "")
+            : ""
+        }
+        meta={term?.short ? `${term.short} · click to open glossary entry` : "click to open glossary entry"}
+      />,
     );
     linked.add(earliest.id);
     cursor = cursor + earliest.idx + earliest.len;

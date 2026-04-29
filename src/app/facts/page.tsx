@@ -190,6 +190,55 @@ export default function FactsPage() {
                       c={FACT_CONFIDENCE[f.id] ?? "verbatim"}
                     />
                   </div>
+                  {f.alternates && f.alternates.length > 0 ? (
+                    <div className="border border-rule mt-2 max-w-3xl">
+                      <p className="px-3 py-2 mono text-[10px] uppercase tracking-widest text-accent border-b border-rule">
+                        On the figures · {f.alternates.length + 1} versions
+                      </p>
+                      <ol className="divide-y divide-rule">
+                        <li className="grid grid-cols-12 gap-3 px-3 py-2.5 text-[12px]">
+                          <span className="col-span-3 md:col-span-2 mono text-accent">
+                            principal
+                          </span>
+                          <span className="col-span-9 md:col-span-7 leading-snug">
+                            {f.text.match(/[\d,]+/)?.[0] ?? "—"}
+                          </span>
+                          <span className="col-span-12 md:col-span-3 mono text-[10px] text-ink-soft md:text-right">
+                            {f.date}
+                          </span>
+                        </li>
+                        {f.alternates.map((a, i) => (
+                          <li
+                            key={i}
+                            className="grid grid-cols-12 gap-3 px-3 py-2.5 text-[12px]"
+                          >
+                            <span className="col-span-3 md:col-span-2 mono text-ink-soft">
+                              alt
+                            </span>
+                            <div className="col-span-9 md:col-span-7 space-y-0.5">
+                              <p className="leading-snug">
+                                <span className="serif font-medium">
+                                  {a.figure}
+                                </span>{" "}
+                                — {a.description}
+                              </p>
+                              <p className="mono text-[10px] text-ink-soft italic serif normal-case tracking-normal">
+                                <SourceLine source={a.source} />
+                              </p>
+                            </div>
+                            <span className="col-span-12 md:col-span-3 mono text-[10px] text-ink-soft md:text-right">
+                              {a.date}
+                            </span>
+                          </li>
+                        ))}
+                      </ol>
+                      {f.alternatesNote ? (
+                        <p className="px-3 py-2 border-t border-rule text-[12px] leading-snug italic text-ink-soft">
+                          {f.alternatesNote}
+                        </p>
+                      ) : null}
+                    </div>
+                  ) : null}
                   <CopyButton text={citation} />
                 </div>
               </li>

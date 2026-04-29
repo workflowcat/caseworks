@@ -24,10 +24,31 @@ const jbm = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Ukraine and the Netherlands v. Russia — A Reader (App. no. 28525/20)",
+  title: {
+    template: "%s · A Reader",
+    default:
+      "Ukraine and the Netherlands v. Russia — A Reader (App. no. 28525/20)",
+  },
   description:
-    "A research resource on the European Court of Human Rights inter-state proceeding concerning the downing of MH17 — primary sources, quotations, glossary, bibliography.",
+    "A research reader on the European Court of Human Rights inter-state proceeding concerning the downing of MH17. Primary sources, quotations, judgment paragraphs, glossary, bibliography.",
+  metadataBase: new URL("https://caseworks-blue.vercel.app"),
+  openGraph: {
+    type: "website",
+    siteName: "A Reader",
+    title:
+      "Ukraine and the Netherlands v. Russia — A Reader",
+    description:
+      "Research reader on the ECHR inter-state proceeding concerning MH17. Primary sources, quotations, judgment paragraphs, glossary.",
+    url: "https://caseworks-blue.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Ukraine and the Netherlands v. Russia — A Reader",
+    description:
+      "Research reader on the ECHR inter-state proceeding concerning MH17.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

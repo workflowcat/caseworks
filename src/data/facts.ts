@@ -1,6 +1,13 @@
 // Atomic facts curated from primary materials. Each appears once; the source
 // is attributed in mono on the back of the card.
 
+export type Alternate = {
+  figure: string;
+  description: string;
+  source: string;
+  date: string;
+};
+
 export type Fact = {
   id: string;
   text: string;
@@ -16,6 +23,10 @@ export type Fact = {
     | "Children"
     | "Casualties"
     | "Russia";
+  // Alternative figures or framings for the same underlying fact, surfaced
+  // side-by-side so the reader sees the range, not a single number.
+  alternates?: Alternate[];
+  alternatesNote?: string;
 };
 
 export const facts: Fact[] = [
@@ -156,6 +167,24 @@ export const facts: Fact[] = [
     date: "April 2014 – January 2022",
     source: "OHCHR, cited in ECHR judgment",
     tag: "Casualties",
+    alternates: [
+      {
+        figure: "considerably higher",
+        description:
+          "The Court itself stated the actual numbers of dead and wounded were 'likely to be considerably higher'",
+        source: "ECHR PR 173 (2025)",
+        date: "Same period",
+      },
+      {
+        figure: ">7,000",
+        description:
+          "Wounded over the same period, recorded by OHCHR alongside the death toll",
+        source: "OHCHR, cited in ECHR judgment",
+        date: "April 2014 – January 2022",
+      },
+    ],
+    alternatesNote:
+      "OHCHR's monitoring is constrained — verified deaths only, no access to occupied territory. The Court noted on the record that the floor underestimates the toll.",
   },
   {
     id: "ohchr-2022",
@@ -193,6 +222,23 @@ export const facts: Fact[] = [
     date: "End of September 2022",
     source: "Ukrainian Govt, cited in ECHR judgment",
     tag: "Children",
+    alternates: [
+      {
+        figure: "19,553",
+        description: "Children deported or forcibly displaced (cumulative, since 24 February 2022)",
+        source: "Ukrainian Government, in the ICC arrest-warrant context",
+        date: "Cumulative figure cited from March 2023 onwards",
+      },
+      {
+        figure: "Several thousand",
+        description:
+          "Children identified by Russian Commissioner for Children's Rights as adopted in Russia",
+        source: "Russian state media; cited in ECHR judgment as evidence of systematic transfer",
+        date: "From May 2022",
+      },
+    ],
+    alternatesNote:
+      "Different cut-offs and definitions: the 7,890 figure is the Ukrainian Government's record at the end of September 2022 (the temporal limit of the ECHR's jurisdiction over Russia); the 19,553 cumulative figure has been cited from March 2023 onwards, including children deported or forcibly displaced after 16 September 2022.",
   },
   {
     id: "children-1985-three",
