@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Spectral } from "next/font/google";
 import "./globals.css";
+import { CommandPalette } from "@/components/command-palette";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,7 +38,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spectral.variable} ${jbm.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        {children}
+        <CommandPalette />
+      </body>
     </html>
   );
 }

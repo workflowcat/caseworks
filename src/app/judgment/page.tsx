@@ -3,6 +3,7 @@ import {
   PageFooter,
   PageHeader,
   PageTitle,
+  SeeAlso,
 } from "@/components/page-chrome";
 import { SectionRail } from "@/components/section-rail";
 import { sections } from "@/data/judgment-sections";
@@ -19,7 +20,7 @@ export default function JudgmentPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="III" title="Annotated judgment" />
+      <PageHeader no="III" title="Annotated judgment" current="/judgment" />
 
       <PageTitle
         kicker="III · Annotated judgment"
@@ -121,7 +122,27 @@ export default function JudgmentPage() {
         </div>
       </main>
 
-      <PageFooter next={{ href: "/witness", title: "A reading" }} />
+<SeeAlso
+        items={[
+          {
+            href: "/quotations",
+            label: "Quotations",
+            note: "Verbatim text from the merits judgment, copyable.",
+          },
+          {
+            href: "/glossary",
+            label: "Glossary",
+            note: "Defined terms used in the judgment — Buk-TELAR, JIT, attribution, administrative practice.",
+          },
+          {
+            href: "/sources#hudoc-merits",
+            label: "Full HUDOC text",
+            note: "The judgment in English and French.",
+          },
+        ]}
+      />
+
+      <PageFooter current="/judgment" />
     </div>
   );
 }

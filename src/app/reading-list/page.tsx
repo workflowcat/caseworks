@@ -71,7 +71,7 @@ export default function ReadingListPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="X" title="Reading list" />
+      <PageHeader no="X" title="Reading list" current="/reading-list" />
 
       <PageTitle
         kicker="X · Reading list"
@@ -222,7 +222,7 @@ export default function ReadingListPage() {
         </section>
       </main>
 
-      <PageFooter />
+      <PageFooter current="/reading-list" />
     </div>
   );
 }

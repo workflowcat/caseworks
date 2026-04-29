@@ -4,6 +4,7 @@ import {
   PageHeader,
   PageTitle,
   Cite,
+  SeeAlso,
 } from "@/components/page-chrome";
 import { ForumStatusStrip } from "@/components/forum-status";
 import { LaunchGeometry } from "@/components/launch-geometry";
@@ -16,7 +17,7 @@ export const metadata = {
 export default function CasePage() {
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="I" title="The case" />
+      <PageHeader no="I" title="The case" current="/case" />
 
       <PageTitle
         kicker="I · The case"
@@ -270,30 +271,32 @@ export default function CasePage() {
         </ul>
       </Section>
 
-      <section className="px-8 lg:px-14 py-12 max-w-5xl">
-        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-5">
-          Continue
-        </p>
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-px bg-rule border-y border-rule">
-          {[
-            ["/history", "II — Procedural history"],
-            ["/judgment", "III — Annotated judgment"],
-            ["/quotations", "V — Quotations"],
-          ].map(([href, label]) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className="block bg-bg p-6 hover:bg-bg-2 transition-colors"
-              >
-                <p className="serif text-lg leading-tight">{label}</p>
-                <p className="mono text-[11px] text-accent mt-3">→</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+<SeeAlso
+        items={[
+          {
+            href: "/glossary#art-41",
+            label: "Just satisfaction (Article 41)",
+            note: "Why the Court adjourned compensation and disjoined this application.",
+          },
+          {
+            href: "/glossary#art-46",
+            label: "Article 46 — binding force",
+            note: "What the operative orders against Russia mean post-cessation.",
+          },
+          {
+            href: "/judgment#mh17-art-3",
+            label: "Article 3 — the next of kin",
+            note: "The reasoning behind the inhuman-treatment finding.",
+          },
+          {
+            href: "/quotations",
+            label: "Quotations",
+            note: "Direct quotations from the merits judgment and the press release.",
+          },
+        ]}
+      />
 
-      <PageFooter next={{ href: "/history", title: "Procedural history" }} />
+      <PageFooter current="/case" />
     </div>
   );
 }

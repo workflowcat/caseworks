@@ -130,7 +130,7 @@ export const reading: ReadingItem[] = [
     date: "9 July 2025",
     url: "https://hudoc.echr.coe.int/eng-press?i=003-8279845-11657965",
     abstract:
-      "The single most useful entry document. Fifteen pages summarising the merits judgment, organised by section. The principal working source for this site pending HUDOC paragraph extraction.",
+      "Fifteen-page summary of the merits judgment, organised by section. Principal working source for this site pending HUDOC paragraph extraction.",
     citation:
       "ECHR Press Release No. 173 (2025), 09.07.2025, Ukraine and the Netherlands v. Russia.",
     depth: "30-min",
@@ -163,7 +163,7 @@ export const reading: ReadingItem[] = [
     date: "October 2015",
     url: "https://www.onderzoeksraad.nl/en/page/3546/crash-mh17-17-july-2014",
     abstract:
-      "The technical reconstruction of the crash. Engineering, debris analysis, flight-path reconstruction. Foundational evidence for everything that came later.",
+      "Technical reconstruction of the crash. Engineering, debris analysis, flight-path reconstruction. Cited throughout subsequent court proceedings.",
     citation:
       "Dutch Safety Board, Crash MH17, 17 July 2014 (final report, October 2015).",
     depth: "deep",
@@ -196,7 +196,7 @@ export const reading: ReadingItem[] = [
     date: "10 July 2025",
     url: "https://www.ejiltalk.org/the-european-courts-merits-judgment-in-ukraine-and-the-netherlands-v-russia-as-good-as-it-gets-almost/",
     abstract:
-      "Probably the single best one-essay account of what the Court did and what it left undone. Argues the doctrinal moves are correct and the framing leaves a back door for future panels to limit reach to Ukraine-grade facts.",
+      "One-essay reading of the merits judgment. Argues the doctrinal moves are correct and that the framing language leaves a back door for future panels to limit reach to Ukraine-grade facts.",
     citation:
       "Marko Milanović, 'The European Court's Merits Judgment in Ukraine and the Netherlands v. Russia: As Good as It Gets (Almost)' EJIL: Talk! (10 July 2025).",
     depth: "30-min",
@@ -290,7 +290,7 @@ export const reading: ReadingItem[] = [
     date: "2014–present",
     url: "https://www.bellingcat.com/tag/mh17/",
     abstract:
-      "Bellingcat's collected MH17 investigations. Geo-located the Buk-TELAR convoy from Russia, identified the launch site, traced the chain of command. The OSINT foundation the JIT built on.",
+      "Bellingcat's collected MH17 investigations. Geo-located the Buk-TELAR convoy from Russia, identified the launch site, traced the chain of command. Cited extensively in the JIT's public materials.",
     citation:
       "Bellingcat, MH17 investigations (2014–present).",
     depth: "deep",

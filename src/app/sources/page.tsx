@@ -62,7 +62,7 @@ const ORDER: Source["group"][] = [
 export default function SourcesPage() {
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="IX" title="Sources" />
+      <PageHeader no="IX" title="Sources" current="/sources" />
 
       <PageTitle
         kicker="IX · Sources"
@@ -154,7 +154,7 @@ export default function SourcesPage() {
         </section>
       </main>
 
-      <PageFooter />
+      <PageFooter current="/sources" />
     </div>
   );
 }

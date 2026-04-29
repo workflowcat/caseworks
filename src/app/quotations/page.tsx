@@ -43,7 +43,7 @@ export default function QuotationsPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="V" title="Quotations" />
+      <PageHeader no="V" title="Quotations" current="/quotations" />
 
       <PageTitle
         kicker="V · Quotations"
@@ -159,7 +159,7 @@ export default function QuotationsPage() {
         </ol>
       </main>
 
-      <PageFooter next={{ href: "/facts", title: "Facts" }} />
+      <PageFooter current="/quotations" />
     </div>
   );
 }

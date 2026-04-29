@@ -59,7 +59,7 @@ export default function FactsPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VI" title="Facts" />
+      <PageHeader no="VI" title="Facts" current="/facts" />
 
       <PageTitle
         kicker="VI · Facts"
@@ -197,9 +197,7 @@ export default function FactsPage() {
         </ol>
       </main>
 
-      <PageFooter
-        next={{ href: "/registers", title: "Voices on the record" }}
-      />
+      <PageFooter current="/facts" />
     </div>
   );
 }

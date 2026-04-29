@@ -2,6 +2,7 @@ import {
   PageFooter,
   PageHeader,
   PageTitle,
+  SeeAlso,
 } from "@/components/page-chrome";
 import { ProceduralGantt } from "@/components/gantt";
 import { procedural } from "@/data/procedural";
@@ -29,7 +30,7 @@ export default function HistoryPage() {
   );
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="II" title="Procedural history" />
+      <PageHeader no="II" title="Procedural history" current="/history" />
 
       <PageTitle
         kicker="II · Procedural history"
@@ -74,7 +75,27 @@ export default function HistoryPage() {
         </ol>
       </main>
 
-      <PageFooter next={{ href: "/judgment", title: "Annotated judgment" }} />
+      <SeeAlso
+        items={[
+          {
+            href: "/case",
+            label: "The case",
+            note: "Identifier, parties, findings, and the disjoined just-satisfaction track.",
+          },
+          {
+            href: "/glossary#joinder",
+            label: "Joinder and disjoinder",
+            note: "Procedural devices the Court used in this proceeding.",
+          },
+          {
+            href: "/sources",
+            label: "Primary documents",
+            note: "Press releases and HUDOC entries cited above.",
+          },
+        ]}
+      />
+
+      <PageFooter current="/history" />
     </div>
   );
 }

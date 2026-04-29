@@ -132,7 +132,7 @@ export default function VerifyPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="XI" title="Verify" />
+      <PageHeader no="XI" title="Verify" current="/verify" />
 
       <PageTitle
         kicker="XI · Verify"
@@ -310,7 +310,7 @@ export default function VerifyPage() {
         </p>
       </section>
 
-      <PageFooter />
+      <PageFooter current="/verify" />
     </div>
   );
 }

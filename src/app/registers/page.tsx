@@ -20,7 +20,7 @@ const VOICE_LABEL: Record<string, string> = {
 export default function RegistersPage() {
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VII" title="Voices on the record" />
+      <PageHeader no="VII" title="Voices on the record" current="/registers" />
 
       <PageTitle
         kicker="VII · Voices on the record"
@@ -64,7 +64,7 @@ export default function RegistersPage() {
         <Bundle key={b.id} bundle={b} idx={i} />
       ))}
 
-      <PageFooter next={{ href: "/glossary", title: "Glossary" }} />
+      <PageFooter current="/registers" />
     </div>
   );
 }

@@ -14,7 +14,7 @@ const PALETTE = {
 export default function WitnessPage() {
   return (
     <article className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="IV" title="A reading" />
+      <PageHeader no="IV" title="A reading" current="/witness" />
 
       <PageTitle
         kicker="IV · A reading"
@@ -108,9 +108,7 @@ export default function WitnessPage() {
         ]}
       />
 
-      <PageFooter
-        next={{ href: "/quotations", title: "Quotations" }}
-      />
+      <PageFooter current="/witness" />
     </article>
   );
 }

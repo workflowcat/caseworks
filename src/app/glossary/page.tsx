@@ -70,7 +70,7 @@ export default function GlossaryPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VIII" title="Glossary" />
+      <PageHeader no="VIII" title="Glossary" current="/glossary" />
 
       <PageTitle
         kicker="VIII · Glossary"
@@ -176,7 +176,7 @@ export default function GlossaryPage() {
         )}
       </main>
 
-      <PageFooter next={{ href: "/sources", title: "Sources" }} />
+      <PageFooter current="/glossary" />
     </div>
   );
 }
