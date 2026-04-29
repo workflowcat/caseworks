@@ -9,6 +9,7 @@ import {
 import { ForumStatusStrip } from "@/components/forum-status";
 import { LaunchGeometry } from "@/components/launch-geometry";
 import { SourceLine } from "@/components/source-link";
+import { GlossaryProse } from "@/components/glossary-link";
 
 export const metadata = {
   title: "I — The case · A Reader",
@@ -91,27 +92,13 @@ export default function CasePage() {
       >
         <LaunchGeometry />
         <p>
-          On 17 July 2014 Malaysia Airlines flight MH17 was shot down
-          near Snizhne, in an occupied part of the Donetsk region. The
-          District Court of The Hague found, on 17 November 2022, that
-          the missile had been fired from a farm field near Pervomaiskyi,
-          in territory the separatists controlled.
+          <GlossaryProse text="On 17 July 2014 Malaysia Airlines flight MH17 was shot down near Snizhne, in an occupied part of the Donetsk region. The District Court of The Hague found, on 17 November 2022, that the missile had been fired from a farm field near Pervomaiskyi, in territory the separatists controlled." />
         </p>
         <p>
-          The European Court of Human Rights, in its admissibility
-          decision of 25 January 2023, held that the downing had occurred
-          wholly within territory in the hands of the separatists and
-          therefore within Russia&rsquo;s spatial jurisdiction. In its
-          merits judgment of 9 July 2025, the Court agreed that the
-          missile had been fired by either a member of the Russian
-          military crew of the Buk-TELAR or a member of the
-          &ldquo;DPR&rdquo;, and that it was unnecessary to decide which
-          — Russia was responsible for both.
+          <GlossaryProse text="The European Court of Human Rights, in its admissibility decision of 25 January 2023, held that the downing had occurred wholly within territory in the hands of the separatists and therefore within Russia's spatial jurisdiction. In its merits judgment of 9 July 2025, the Court agreed that the missile had been fired by either a member of the Russian military crew of the Buk-TELAR or a member of the 'DPR', and that it was unnecessary to decide which — Russia was responsible for both." />
         </p>
         <p>
-          The ICAO Council, on 12 May 2025, found Russia in breach of
-          Article 3 <em>bis</em> of the Chicago Convention by use of
-          weapons against civil aircraft in flight.
+          <GlossaryProse text="The ICAO Council, on 12 May 2025, found Russia in breach of Article 3 bis of the Chicago Convention by use of weapons against civil aircraft in flight." />
         </p>
       </Section>
 
@@ -124,26 +111,31 @@ export default function CasePage() {
           art="Art. 2"
           label="Right to life — substantive"
           text="The deployment of the Buk-TELAR in an area where civilian flights were still operating, and the failure to take measures to identify the target accurately or close the airspace, breached the right to life."
+          op={5}
         />
         <FindingRow
           art="Art. 2"
           label="Right to life — procedural"
           text="Russia failed to investigate effectively and to cooperate with the Joint Investigation Team. Its inquiries were piecemeal, often inaccurate or fabricated, and obstructive."
+          op={6}
         />
         <FindingRow
           art="Art. 3"
           label="Inhuman treatment — next of kin"
           text="The continuing profound suffering of the next of kin reached a character and dimension that amounted to inhuman treatment under the Convention."
+          op={8}
         />
         <FindingRow
           art="Art. 13"
           label="No effective remedy"
           text="Any suggestion that the relatives could obtain the truth and bring those responsible to justice in the Russian courts was, on the record, fanciful."
+          op={7}
         />
         <FindingRow
           art="Art. 38"
           label="Cooperation with the Court"
           text="Russia's lack of constructive engagement and failure to participate at all in the proceedings on the merits breached its obligations under Article 38."
+          op={25}
         />
       </Section>
 
@@ -152,21 +144,27 @@ export default function CasePage() {
         title="Just satisfaction (Article 41) — adjourned and disjoined"
       >
         <p>
-          The Court held that the question of compensation under Article
-          41 was not yet ready for decision. It noted that any future
-          award would have to take account of the four pending individual
-          applications lodged before the Court by relatives of those who
-          lost their lives on flight MH17 — by more than five hundred
-          individuals in total — and of developments before the Council
-          of the International Civil Aviation Organisation, which had in
-          May 2025 found Russia to have failed in its international-law
-          obligations in respect of the downing.
+          <GlossaryProse text="The Court held that the question of compensation under Article 41 was not yet ready for decision. It noted that any future award would have to take account of the four pending individual applications lodged before the Court by relatives of those who lost their lives on flight MH17 — by more than five hundred individuals in total — and of developments before the Council of the International Civil Aviation Organisation, which had in May 2025 found Russia to have failed in its international-law obligations in respect of the downing." />
         </p>
         <p>
-          For these reasons the Court decided to{" "}
-          <strong>separate the further proceedings</strong> concerning
-          the downing of flight MH17 from the remainder of the case.
+          <GlossaryProse text="For these reasons the Court decided to separate the further proceedings concerning the downing of flight MH17 from the remainder of the case." />
         </p>
+        <div className="flex items-baseline gap-3 mono text-[10px] uppercase tracking-widest pt-1">
+          <a
+            href="/judgment/paragraphs#op-28"
+            className="text-ink-soft hover:text-accent"
+            title="Operative order 28 — Article 41 not ready for decision"
+          >
+            ↳ Operative order 28
+          </a>
+          <a
+            href="/judgment/paragraphs#op-29"
+            className="text-ink-soft hover:text-accent"
+            title="Operative order 29 — Disjoinder of 28525/20"
+          >
+            ↳ Operative order 29
+          </a>
+        </div>
         <p className="mono text-[11px] text-ink-soft">
           Source: <SourceLine source="ECHR PR 173 (2025), section &ldquo;Just satisfaction (Article 41)&rdquo;" />
         </p>
@@ -179,19 +177,28 @@ export default function CasePage() {
       >
         <ol className="space-y-3 list-decimal pl-5">
           <li>
-            Without delay, release or safely return all persons deprived
-            of their liberty on Ukrainian territory under occupation
-            before 16 September 2022 and still in Russian custody.
+            <GlossaryProse text="Without delay, release or safely return all persons deprived of their liberty on Ukrainian territory under occupation before 16 September 2022 and still in Russian custody." />
           </li>
           <li>
-            Without delay, cooperate in the establishment of an
-            international and independent mechanism to identify all
-            children transferred from Ukraine to Russia or
-            Russian-controlled territory before 16 September 2022,
-            restore contact with their families or legal guardians, and
-            reunite them.
+            <GlossaryProse text="Without delay, cooperate in the establishment of an international and independent mechanism to identify all children transferred from Ukraine to Russia or Russian-controlled territory before 16 September 2022, restore contact with their families or legal guardians, and reunite them." />
           </li>
         </ol>
+        <div className="flex items-baseline gap-3 mono text-[10px] uppercase tracking-widest pt-1">
+          <a
+            href="/judgment/paragraphs#op-26"
+            className="text-ink-soft hover:text-accent"
+            title="Operative order 26 — Release of detainees"
+          >
+            ↳ Operative order 26
+          </a>
+          <a
+            href="/judgment/paragraphs#op-27"
+            className="text-ink-soft hover:text-accent"
+            title="Operative order 27 — Children-identification mechanism"
+          >
+            ↳ Operative order 27
+          </a>
+        </div>
       </Section>
 
       <Section
@@ -199,10 +206,7 @@ export default function CasePage() {
         title="The same conduct, four further forums"
       >
         <p>
-          The downing of MH17 has been the subject of proceedings in five
-          forums to date. The list below is non-exhaustive — the
-          individual ECHR applications by relatives are not set out
-          separately.
+          <GlossaryProse text="The downing of MH17 has been the subject of proceedings in five forums to date. The list below is non-exhaustive — the individual ECHR applications by relatives are not set out separately." />
         </p>
         <ul className="mt-5 divide-y divide-rule border-y border-rule">
           {[
@@ -363,10 +367,12 @@ function FindingRow({
   art,
   label,
   text,
+  op,
 }: {
   art: string;
   label: string;
   text: string;
+  op?: number;
 }) {
   return (
     <div className="grid grid-cols-12 gap-3 py-3 border-b border-rule">
@@ -376,7 +382,20 @@ function FindingRow({
       <p className="col-span-9 md:col-span-3 serif text-base leading-tight pt-0.5">
         {label}
       </p>
-      <p className="col-span-12 md:col-span-7 text-sm leading-snug">{text}</p>
+      <div className="col-span-12 md:col-span-7 space-y-2">
+        <p className="text-sm leading-snug">
+          <GlossaryProse text={text} />
+        </p>
+        {op ? (
+          <a
+            href={`/judgment/paragraphs#op-${op}`}
+            className="mono text-[10px] uppercase tracking-widest text-ink-soft hover:text-accent inline-block"
+            title={`Operative order ${op}`}
+          >
+            ↳ Operative order {op}
+          </a>
+        ) : null}
+      </div>
     </div>
   );
 }
