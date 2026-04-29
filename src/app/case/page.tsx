@@ -7,6 +7,7 @@ import {
 } from "@/components/page-chrome";
 import { ForumStatusStrip } from "@/components/forum-status";
 import { LaunchGeometry } from "@/components/launch-geometry";
+import { SourceLine } from "@/components/source-link";
 
 export const metadata = {
   title: "I — The case · A Reader",
@@ -49,22 +50,30 @@ export default function CasePage() {
           <Row label="Joined to">
             Ukraine v. Russia (re Eastern Ukraine) (no. 8019/16) and
             Ukraine v. Russia (II) (no. 43800/14), on 27 November 2020
-            <Cite>{" "}— ECHR PR 026 (2023)</Cite>
+<span className="mono text-[10px] text-ink-soft uppercase tracking-wider">
+              {" "}— <SourceLine source="ECHR PR 026 (2023)" />
+            </span>
           </Row>
           <Row label="Admissibility">
             <span className="mono">25 January 2023</span> — partly
             admissible
-            <Cite>{" "}— ECHR PR 026 (2023)</Cite>
+<span className="mono text-[10px] text-ink-soft uppercase tracking-wider">
+              {" "}— <SourceLine source="ECHR PR 026 (2023)" />
+            </span>
           </Row>
           <Row label="Merits judgment">
             <span className="mono">9 July 2025</span> — Grand Chamber,
             unanimous
-            <Cite>{" "}— ECHR PR 173 (2025)</Cite>
+<span className="mono text-[10px] text-ink-soft uppercase tracking-wider">
+              {" "}— <SourceLine source="ECHR PR 173 (2025)" />
+            </span>
           </Row>
           <Row label="Just satisfaction" last>
             <span className="text-accent">Adjourned and disjoined</span>{" "}
             from the rest of the case to permit separate examination
-            <Cite>{" "}— ECHR PR 173 (2025), Article 41</Cite>
+<span className="mono text-[10px] text-ink-soft uppercase tracking-wider">
+              {" "}— <SourceLine source="ECHR PR 173 (2025), Article 41" />
+            </span>
           </Row>
         </div>
       </section>
@@ -153,8 +162,7 @@ export default function CasePage() {
           the downing of flight MH17 from the remainder of the case.
         </p>
         <p className="mono text-[11px] text-ink-soft">
-          Source: ECHR PR 173 (2025), section &ldquo;Just satisfaction
-          (Article 41)&rdquo;.
+          Source: <SourceLine source="ECHR PR 173 (2025), section &ldquo;Just satisfaction (Article 41)&rdquo;" />
         </p>
       </Section>
 
@@ -192,21 +200,65 @@ export default function CasePage() {
         </p>
         <ul className="mt-5 divide-y divide-rule border-y border-rule">
           {[
-            ["Hague District Court", "17 November 2022", "Convicted Igor Girkin, Sergey Dubinskiy, and Leonid Kharchenko in absentia of causing the crash and the murder of all 298 on board. Sentenced to life imprisonment. Pulatov acquitted."],
-            ["ICAO Council", "12 May 2025", "Russia found in breach of Article 3 bis of the Chicago Convention. Vote 22–3 with 10 abstentions. The first decision on the merits of an Article 84 dispute in the Council's history."],
-            ["European Court of Human Rights", "9 July 2025", "Substantive and procedural violations of Articles 2, 3, 13. Application 28525/20 disjoined for separate just-satisfaction examination."],
-            ["International Court of Justice", "Filed September 2025", "Russia's appeal of the ICAO Council decision under Article 84 of the Chicago Convention. Pending."],
-            ["European Court of Human Rights — individual applications", "Pending", "Four individual applications by more than five hundred relatives of MH17 victims."],
-          ].map(([f, d, t]) => (
-            <li key={f} className="grid grid-cols-12 gap-3 py-4">
+            {
+              forum: "Hague District Court",
+              date: "17 November 2022",
+              text: "Convicted Igor Girkin, Sergey Dubinskiy, and Leonid Kharchenko in absentia of causing the crash and the murder of all 298 on board. Sentenced to life imprisonment. Pulatov acquitted.",
+              url: "https://www.courtmh17.com/en/judgement-and-livestream/verdict-17-november-2022.htm",
+              src: "courtmh17.com",
+            },
+            {
+              forum: "ICAO Council",
+              date: "12 May 2025",
+              text: "Russia found in breach of Article 3 bis of the Chicago Convention. Vote 22–3 with 10 abstentions. The first decision on the merits of an Article 84 dispute in the Council's history.",
+              url: "https://www.icao.int/news/icao-council-vote-flight-mh17-case",
+              src: "icao.int",
+            },
+            {
+              forum: "European Court of Human Rights",
+              date: "9 July 2025",
+              text: "Substantive and procedural violations of Articles 2, 3, 13. Application 28525/20 disjoined for separate just-satisfaction examination.",
+              url: "https://hudoc.echr.coe.int/eng-press?i=003-8279845-11657965",
+              src: "ECHR PR 173 (2025)",
+            },
+            {
+              forum: "International Court of Justice",
+              date: "Filed September 2025",
+              text: "Russia's appeal of the ICAO Council decision under Article 84 of the Chicago Convention. Pending.",
+              url: "https://www.icj-cij.org/",
+              src: "icj-cij.org",
+            },
+            {
+              forum: "European Court of Human Rights — individual applications",
+              date: "Pending",
+              text: "Four individual applications by more than five hundred relatives of MH17 victims.",
+              url: "https://hudoc.echr.coe.int/eng-press?i=003-8279845-11657965",
+              src: "ECHR PR 173 (2025)",
+            },
+          ].map((row) => (
+            <li
+              key={row.forum}
+              className="grid grid-cols-12 gap-3 py-4"
+            >
               <p className="col-span-12 md:col-span-3 serif text-base leading-tight">
-                {f}
+                {row.forum}
               </p>
               <p className="col-span-12 md:col-span-2 mono text-xs text-ink-soft">
-                {d}
+                {row.date}
               </p>
-              <p className="col-span-12 md:col-span-7 text-sm leading-snug">
-                {t}
+              <p className="col-span-12 md:col-span-6 text-sm leading-snug">
+                {row.text}
+              </p>
+              <p className="col-span-12 md:col-span-1 text-right">
+                <a
+                  href={row.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mono text-[10px] uppercase tracking-widest underline decoration-1 underline-offset-2 hover:text-accent"
+                  title={row.src}
+                >
+                  ↗
+                </a>
               </p>
             </li>
           ))}

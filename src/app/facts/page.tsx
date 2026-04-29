@@ -9,6 +9,7 @@ import {
 } from "@/components/page-chrome";
 import { CopyButton } from "@/components/copy-button";
 import { DistBar } from "@/components/dist-bar";
+import { SourceLine } from "@/components/source-link";
 
 export default function FactsPage() {
   const [query, setQuery] = useState("");
@@ -178,7 +179,7 @@ export default function FactsPage() {
                     </span>
                     <span className="text-ink-soft">{f.date}</span>
                     <span className="text-ink-soft italic serif normal-case tracking-normal">
-                      {f.source}
+                      <SourceLine source={f.source} />
                     </span>
                   </div>
                   <CopyButton text={citation} />

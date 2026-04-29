@@ -7,6 +7,7 @@ import { terms, clusterLabels, type Term } from "@/data/glossary";
 import { quotes } from "@/data/quotes";
 import { facts } from "@/data/facts";
 import { sections } from "@/data/judgment-sections";
+import { SourceLine } from "@/components/source-link";
 
 function countMentions(t: Term) {
   // Build a list of strings to search against (term, short, common variants)
@@ -130,7 +131,7 @@ export default function GlossaryPage() {
                         </p>
                         {t.source ? (
                           <p className="mono text-[11px] text-ink-soft">
-                            Source: {t.source}
+                            Source: <SourceLine source={t.source} />
                           </p>
                         ) : null}
                         {(() => {

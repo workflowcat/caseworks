@@ -5,6 +5,7 @@ import {
 } from "@/components/page-chrome";
 import { ProceduralGantt } from "@/components/gantt";
 import { procedural } from "@/data/procedural";
+import { SourceLine } from "@/components/source-link";
 
 export const metadata = { title: "II — Procedural history · A Reader" };
 
@@ -65,7 +66,7 @@ export default function HistoryPage() {
                 </h3>
                 <p className="text-base leading-relaxed">{s.body}</p>
                 <p className="mono text-[11px] text-ink-soft">
-                  Source: {s.source}
+                  Source: <SourceLine source={s.source} />
                 </p>
               </div>
             </li>

@@ -3,6 +3,7 @@ import {
   PageHeader,
   PageTitle,
 } from "@/components/page-chrome";
+import { SourceLine } from "@/components/source-link";
 
 export const metadata = { title: "IV — A reading · A Reader" };
 
@@ -144,7 +145,7 @@ function Chapter({
           ))}
         </div>
         <p className="mono text-[11px] text-ink-soft mt-7 max-w-3xl">
-          Sources: {sources}
+          Sources: <SourceLine source={sources} />
         </p>
       </div>
     </section>

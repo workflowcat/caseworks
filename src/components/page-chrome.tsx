@@ -87,12 +87,23 @@ export function PageTitle({
 
 export function Cite({
   children,
+  source,
 }: {
   children: ReactNode;
+  source?: string;
 }) {
   return (
     <span className="mono text-[10px] text-ink-soft uppercase tracking-wider">
-      {children}
+      {source ? <CitedSource source={source} /> : children}
     </span>
+  );
+}
+
+function CitedSource({ source }: { source: string }) {
+  // tiny helper kept here to avoid React import chain — render plain link
+  // (full SourceLink handles multi-source strings)
+  return (
+    // dynamic import would complicate things; just defer to consumers using SourceLine directly
+    <span>{source}</span>
   );
 }

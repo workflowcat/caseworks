@@ -9,6 +9,7 @@ import {
 } from "@/components/page-chrome";
 import { CopyButton } from "@/components/copy-button";
 import { DistBar } from "@/components/dist-bar";
+import { SourceLine } from "@/components/source-link";
 
 export default function QuotationsPage() {
   const [query, setQuery] = useState("");
@@ -138,7 +139,7 @@ export default function QuotationsPage() {
                   </p>
                   {q.context ? (
                     <p className="serif italic text-sm text-ink-soft">
-                      {q.context}
+                      <SourceLine source={q.context} />
                     </p>
                   ) : null}
                   <CopyButton text={citation} />

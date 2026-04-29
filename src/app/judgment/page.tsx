@@ -6,6 +6,7 @@ import {
 } from "@/components/page-chrome";
 import { SectionRail } from "@/components/section-rail";
 import { sections } from "@/data/judgment-sections";
+import { SourceLine } from "@/components/source-link";
 
 export const metadata = { title: "III — Annotated judgment · A Reader" };
 
@@ -103,7 +104,7 @@ export default function JudgmentPage() {
                         &ldquo;{p.text}&rdquo;
                       </p>
                       <p className="mono text-[11px] text-ink-soft mt-3">
-                        {p.cite}
+                        <SourceLine source={p.cite} />
                       </p>
                     </blockquote>
                   ))}

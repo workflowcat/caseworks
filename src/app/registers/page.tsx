@@ -4,6 +4,7 @@ import {
   PageHeader,
   PageTitle,
 } from "@/components/page-chrome";
+import { SourceLine } from "@/components/source-link";
 
 export const metadata = { title: "VII — Voices on the record · A Reader" };
 
@@ -127,7 +128,7 @@ function Bundle({
                 {r.voiceLabel}
               </p>
               <p className="mono text-[10px] text-ink-soft mt-2">
-                {r.context}
+                <SourceLine source={r.context} />
               </p>
             </div>
           </li>
