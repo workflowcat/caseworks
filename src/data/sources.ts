@@ -111,6 +111,19 @@ export const sources: Source[] = [
       "Allegations of Genocide (Ukraine v. Russia), Preliminary Objections, Judgment of 2 February 2024.",
     group: "primary-court",
   },
+  {
+    id: "icj-cerd-icsft",
+    title:
+      "Application of the ICSFT and CERD (Ukraine v. Russian Federation)",
+    publication: "International Court of Justice",
+    date: "Judgment 31 January 2024",
+    url: "https://www.icj-cij.org/case/166",
+    citation:
+      "Application of the ICSFT and CERD (Ukraine v. Russian Federation), Judgment of 31 January 2024, ICJ General List No. 166.",
+    group: "primary-court",
+    notes:
+      "Adjacent ICJ case decided in early 2024. Russia found in breach of ICSFT (procedural obligations) and CERD (education in the Ukrainian language in Crimea).",
+  },
 
   // ICAO
   {

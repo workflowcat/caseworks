@@ -385,6 +385,69 @@ export const reading: ReadingItem[] = [
     language: "en",
   },
   {
+    id: "milanovic-russia-ukraine-echr",
+    title:
+      "The Russia-Ukraine War and the European Convention on Human Rights",
+    authors: "Marko Milanović",
+    publication: "Articles of War — Lieber Institute West Point",
+    date: "1 March 2022",
+    url: "https://lieber.westpoint.edu/russia-ukraine-war-european-convention-human-rights/",
+    abstract:
+      "Written days after the full-scale invasion. Sets out the framework for inter-state and individual ECHR proceedings against Russia, the role of Article 15 derogations, and the Convention–IHL relationship. Foundational reading for the doctrinal moves the Court made three years later.",
+    citation:
+      "Marko Milanović, 'The Russia-Ukraine War and the European Convention on Human Rights' Articles of War (Lieber Institute West Point, 1 March 2022).",
+    depth: "30-min",
+    kind: "academic",
+    language: "en",
+  },
+  {
+    id: "shany-ihl-ihrl",
+    title:
+      "Co-application of IHL and IHRL: Some Takeaways from the Ukraine and Gaza Wars",
+    authors: "Yuval Shany",
+    publication: "Articles of War — Lieber Institute West Point",
+    date: "29 April 2024",
+    url: "https://lieber.westpoint.edu/co-application-ihl-ihrl-some-takeaways-ukraine-gaza-wars/",
+    abstract:
+      "On the convergence of international humanitarian law and international human-rights law in armed conflict — the doctrinal question the merits judgment had to resolve. Comparative reading drawing on Ukraine and Gaza.",
+    citation:
+      "Yuval Shany, 'Co-application of IHL and IHRL: Some Takeaways from the Ukraine and Gaza Wars' Articles of War (Lieber Institute West Point, 29 April 2024).",
+    depth: "30-min",
+    kind: "academic",
+    language: "en",
+  },
+  {
+    id: "tkemaladze-aggression",
+    title:
+      "Litigating the Act of Aggression as Human Rights Claims",
+    authors: "Revaz Tkemaladze",
+    publication: "Articles of War — Lieber Institute West Point",
+    date: "21 February 2025",
+    url: "https://lieber.westpoint.edu/litigating-act-aggression-human-rights-claims/",
+    abstract:
+      "On the structural question of whether and how aggression can be litigated through the human-rights frame — the move the Court ultimately made in the merits judgment. Useful as a doctrinal companion.",
+    citation:
+      "Revaz Tkemaladze, 'Litigating the Act of Aggression as Human Rights Claims' Articles of War (Lieber Institute West Point, 21 February 2025).",
+    depth: "30-min",
+    kind: "academic",
+    language: "en",
+  },
+  {
+    id: "icj-cerd-icsft",
+    title:
+      "Application of the International Convention for the Suppression of the Financing of Terrorism and of the International Convention on the Elimination of All Forms of Racial Discrimination (Ukraine v. Russian Federation)",
+    publication: "International Court of Justice",
+    date: "Application 2017; judgment 31 January 2024",
+    url: "https://www.icj-cij.org/case/166",
+    abstract:
+      "ICJ General List No. 166. Russia found in breach of the ICSFT on the procedural obligation to investigate and freeze funds, and of the CERD in respect of education in the Ukrainian language in Crimea. Adjacent case to the ECHR proceeding; cites overlap in fact-finding.",
+    citation:
+      "Application of the ICSFT and CERD (Ukraine v. Russian Federation), Judgment of 31 January 2024, ICJ General List No. 166.",
+    depth: "deep",
+    kind: "primary-court",
+    language: "en",
+  },
+  {
     id: "milanovic-extraterritorial",
     title:
       "Extraterritorial Application of Human Rights Treaties — Law, Principles, and Policy",
