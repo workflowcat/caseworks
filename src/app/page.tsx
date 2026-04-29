@@ -1,155 +1,210 @@
 import Link from "next/link";
-import { cases } from "@/data/types";
+import { quotes } from "@/data/quotes";
+import { facts } from "@/data/facts";
 
-const concepts = [
+const SECTIONS: Array<{
+  no: string;
+  href: string;
+  title: string;
+  one: string;
+  kind: "reading" | "reference";
+}> = [
+  // Reading
   {
-    href: "/grid",
-    no: "01",
-    name: "Ledger",
-    deck: "Every case as a tile. Sized by gravity, sortable by anything.",
-    vibe: "Dense. Cold. The whole inventory in one grid.",
+    no: "I",
+    href: "/case",
+    title: "The case",
+    one: "Identifier, parties, findings, and the disjoined just-satisfaction track. The canonical page on application 28525/20.",
+    kind: "reading",
   },
   {
-    href: "/constellation",
-    no: "02",
-    name: "Constellation",
-    deck: "Cases as points on two free axes. Choose what to compare.",
-    vibe: "Spacious. Editorial. Structure over story.",
+    no: "II",
+    href: "/history",
+    title: "Procedural history",
+    one: "Filings, joinder, hearings, judgment, disjoinder. From 13 March 2014 to today.",
+    kind: "reading",
   },
   {
-    href: "/timeline",
-    no: "03",
-    name: "Timeline",
-    deck: "Eleven years on a horizontal scroll. Conflict and law on the same axis.",
-    vibe: "Cinematic. Scroll-driven. Time as the only dimension.",
+    no: "III",
+    href: "/judgment",
+    title: "Annotated judgment",
+    one: "A working reading of the press release that summarises the Grand Chamber's 9 July 2025 merits judgment, with anchor links to the parts of the public record that controlled.",
+    kind: "reading",
   },
   {
-    href: "/pleadings",
-    no: "04",
-    name: "Pleadings",
-    deck: "A forensic dossier on MH17. Five forums. One missile.",
-    vibe: "Evidentiary. Diagrammatic. The exhibit annex.",
-  },
-  {
+    no: "IV",
     href: "/witness",
-    no: "05",
-    name: "Witness",
-    deck: "What eleven years of waiting looks like, in the second person.",
-    vibe: "Intimate. Editorial. One human's path through the system.",
+    title: "A reading",
+    one: "Six chapters on what eleven years of waiting looks like for the families of the 298 people killed on 17 July 2014.",
+    kind: "reading",
+  },
+  // Reference
+  {
+    no: "V",
+    href: "/quotations",
+    title: "Quotations",
+    one: "Every direct quotation used on this site, with its attribution and a citation that copies to your clipboard.",
+    kind: "reference",
   },
   {
-    href: "/specimens",
-    no: "06",
-    name: "Specimens",
-    deck: "Each case as a hand-drawn organic specimen. Pinned to a plate.",
-    vibe: "Slow. Crafted. A drawer of plants, not a dashboard.",
+    no: "VI",
+    href: "/facts",
+    title: "Facts",
+    one: "Atomic facts curated from primary materials, filtered by topic, sortable, copyable.",
+    kind: "reference",
   },
   {
-    href: "/mirror",
-    no: "07",
-    name: "Mirror",
-    deck: "Courtroom on the left, the ground on the right. Same time axis.",
-    vibe: "Restrained. Structural. The simultaneity is the argument.",
-  },
-  {
-    href: "/treaty",
-    no: "08",
-    name: "Treaty Atlas",
-    deck: "Cases mapped to the legal instruments they invoke.",
-    vibe: "Bipartite. Networked. Hover to see the spokes.",
-  },
-  {
-    href: "/defendant",
-    no: "09",
-    name: "Defendant",
-    deck: "Russia as the subject of one big poster.",
-    vibe: "Punk. Headline-grade. Big numbers, big type.",
-  },
-  {
+    no: "VII",
     href: "/registers",
-    no: "10",
-    name: "Registers",
-    deck: "The same fact rendered in six voices on the public record.",
-    vibe: "Parallel-text. Lateral. The differences are the content.",
+    title: "Voices on the record",
+    one: "The same event — the downing, the next of kin, the children — rendered through six voices: Court, Ukraine, the Netherlands, Russia, monitor, academic.",
+    kind: "reference",
   },
   {
-    href: "/voices",
-    no: "11",
-    name: "Voices",
-    deck: "Forty pages, one quotation each. No commentary, no chart.",
-    vibe: "Slow. Typographic. The words breathing on their own.",
+    no: "VIII",
+    href: "/glossary",
+    title: "Glossary",
+    one: "Defined terms used on this site: Buk-TELAR, JIT, de facto organ, administrative practice, just satisfaction, Article 3 bis, and others.",
+    kind: "reference",
   },
   {
-    href: "/cards",
-    no: "12",
-    name: "Cards",
-    deck: "Every fact rendered as a single index card. Sortable, atomic.",
-    vibe: "Tactile. Reader-driven. Make your own argument.",
+    no: "IX",
+    href: "/sources",
+    title: "Sources",
+    one: "Bibliography of primary documents and secondary commentary cited on this site.",
+    kind: "reference",
   },
-] as const;
+];
 
 export default function Home() {
+  const reading = SECTIONS.filter((s) => s.kind === "reading");
+  const reference = SECTIONS.filter((s) => s.kind === "reference");
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="px-8 lg:px-14 pt-10 pb-6 flex items-baseline justify-between border-b border-rule">
-        <div>
-          <p className="serif text-2xl tracking-tight">caseworks</p>
-          <p className="label text-ink-soft mt-2">
-            Twelve views of the same record
-          </p>
-        </div>
-        <p className="mono text-xs text-ink-soft hidden md:block">
-          {cases.length} cases · {new Set(cases.map((c) => c.forum)).size} forums
+    <div className="min-h-screen flex flex-col bg-bg text-ink">
+      <header className="px-8 lg:px-14 pt-9 pb-5 flex items-baseline justify-between border-b border-rule">
+        <p className="serif text-base tracking-tight">A Reader</p>
+        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft">
+          App. no. 28525/20
         </p>
       </header>
 
-      <main className="flex-1 px-8 lg:px-14 py-16 lg:py-24">
-        <h1 className="serif text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight max-w-5xl">
-          The Ukraine–Russia legal landscape,
-          <br />
-          <span className="italic text-ink-soft">twelve ways.</span>
+      <main className="flex-1 px-8 lg:px-14 py-16 lg:py-24 max-w-5xl">
+        <p className="mono text-[11px] uppercase tracking-widest text-ink-soft">
+          European Court of Human Rights · inter-state proceeding
+        </p>
+        <h1 className="serif font-medium tracking-tight leading-[0.98] mt-6 text-[clamp(2rem,4.4vw,4.4rem)]">
+          Ukraine and the Netherlands
+          <span className="italic text-ink-soft"> v. </span>
+          Russia
         </h1>
-        <p className="mt-10 max-w-2xl text-lg leading-snug text-ink-soft">
-          Same case data. Twelve radically different surfaces. Each
-          commits fully to its own visual logic — pick the one that lets
-          you see what you came to see.
+        <p
+          className="mt-3 serif italic text-[clamp(1.1rem,1.6vw,1.5rem)] text-ink-soft max-w-3xl"
+        >
+          On the downing of Malaysia Airlines flight MH17 over occupied
+          territory in eastern Ukraine, 17 July 2014, and Russia&rsquo;s
+          subsequent conduct.
         </p>
 
-        <ol className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border-y border-rule">
-          {concepts.map((c) => (
-            <li key={c.href} className="bg-bg">
-              <Link
-                href={c.href}
-                className="block p-8 lg:p-10 h-full hover:bg-bg-2 transition-colors group"
-              >
-                <p className="mono text-xs text-accent">{c.no}</p>
-                <h2 className="serif text-4xl tracking-tight mt-5 group-hover:text-accent transition-colors">
-                  {c.name}
-                </h2>
-                <p className="mt-5 text-base leading-relaxed">{c.deck}</p>
-                <p className="mt-3 italic text-sm text-ink-soft">{c.vibe}</p>
-                <p className="mt-10 mono text-xs text-accent inline-block">
-                  Open ↗
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <p className="mt-12 max-w-2xl text-base leading-relaxed">
+          A research reader on the inter-state proceeding lodged by the
+          Kingdom of the Netherlands against the Russian Federation under
+          the European Convention on Human Rights. The Grand Chamber
+          delivered its merits judgment on the joined applications on{" "}
+          <span className="mono">9 July 2025</span>; on the same day, it
+          disjoined this application from the rest of the case to permit
+          the just-satisfaction question to proceed separately.
+        </p>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+          This site is reading and reference. Quotations are reproduced
+          from the public record where verifiable; paraphrase is marked.
+          Sources are surfaced. Each section ends where the next begins.
+        </p>
+
+        <section className="mt-16">
+          <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-5">
+            Reading
+          </p>
+          <ol className="border-t border-rule">
+            {reading.map((s) => (
+              <Row key={s.href} s={s} />
+            ))}
+          </ol>
+        </section>
+
+        <section className="mt-16">
+          <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-5">
+            Reference
+          </p>
+          <ol className="border-t border-rule">
+            {reference.map((s) => (
+              <Row key={s.href} s={s} />
+            ))}
+          </ol>
+        </section>
+
+        <section className="mt-20 max-w-3xl">
+          <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-5">
+            On confidence
+          </p>
+          <p className="text-base leading-relaxed">
+            Quotations marked verbatim are reproduced word-for-word from
+            the cited primary source. Quotations marked{" "}
+            <em>paraphrased</em> have been compressed or summarised; the
+            underlying source supports the substance but not the exact
+            wording. Where the original is in another language and an
+            English version is shown, that is noted as{" "}
+            <em>translated</em>. Numbers carry the cited source in the
+            same block. The court text controls in every case.
+          </p>
+        </section>
       </main>
 
-      <footer className="px-8 lg:px-14 py-8 border-t border-rule mono text-[11px] text-ink-soft flex flex-wrap gap-x-8 gap-y-2 justify-between">
-        <span>
-          Companion to{" "}
+      <footer className="px-8 lg:px-14 py-7 border-t border-rule grid grid-cols-12 gap-4 mono text-[11px] text-ink-soft">
+        <p className="col-span-12 md:col-span-6">
+          A reader. Not legal advice. The judgments control.
+        </p>
+        <p className="col-span-6 md:col-span-3">
+          {quotes.length} quotations · {facts.length} facts
+        </p>
+        <p className="col-span-6 md:col-span-3 md:text-right">
+          Companion exploration ·{" "}
           <a
-            className="underline decoration-accent decoration-1 underline-offset-2"
             href="https://casemap-blue.vercel.app"
+            className="underline decoration-accent decoration-1 underline-offset-2"
           >
             CaseMap
-          </a>{" "}
-          — different aesthetic, same evidence.
-        </span>
-        <span>Built for Vercel. No legal advice. The judgments control.</span>
+          </a>
+        </p>
       </footer>
     </div>
+  );
+}
+
+function Row({
+  s,
+}: {
+  s: { no: string; href: string; title: string; one: string };
+}) {
+  return (
+    <li className="border-b border-rule">
+      <Link
+        href={s.href}
+        className="grid grid-cols-12 gap-3 py-5 hover:bg-bg-2 transition-colors group"
+      >
+        <span className="col-span-2 md:col-span-1 mono text-sm text-accent pt-1">
+          {s.no}
+        </span>
+        <span className="col-span-10 md:col-span-3 serif text-xl tracking-tight leading-tight pt-0.5">
+          {s.title}
+        </span>
+        <span className="col-span-12 md:col-span-7 text-sm leading-snug text-ink-soft pt-1">
+          {s.one}
+        </span>
+        <span className="col-span-12 md:col-span-1 mono text-[11px] text-ink-soft md:text-right pt-1.5 group-hover:text-accent transition-colors">
+          →
+        </span>
+      </Link>
+    </li>
   );
 }

@@ -23,9 +23,10 @@ const jbm = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Caseworks — three views of the Ukraine–Russia legal landscape",
+  title:
+    "Ukraine and the Netherlands v. Russia — A Reader (App. no. 28525/20)",
   description:
-    "Three styling and layout explorations of the same case data: ledger, constellation, timeline.",
+    "A research resource on the European Court of Human Rights inter-state proceeding concerning the downing of MH17 — primary sources, quotations, glossary, bibliography.",
 };
 
 export default function RootLayout({
