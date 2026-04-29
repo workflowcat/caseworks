@@ -4,6 +4,51 @@ import {
   PageTitle,
 } from "@/components/page-chrome";
 import { terms, clusterLabels, type Term } from "@/data/glossary";
+import { quotes } from "@/data/quotes";
+import { facts } from "@/data/facts";
+import { sections } from "@/data/judgment-sections";
+
+function countMentions(t: Term) {
+  // Build a list of strings to search against (term, short, common variants)
+  const needles = new Set<string>(
+    [t.term, t.short]
+      .filter(Boolean)
+      .map((s) => s.toLowerCase()),
+  );
+  // common variants
+  if (t.id === "buk-telar") {
+    needles.add("buk-telar");
+    needles.add("buk missile");
+    needles.add("buk surface-to-air");
+  }
+  if (t.id === "jit") {
+    needles.add("joint investigation team");
+    needles.add(" jit");
+  }
+
+  function hasNeedle(s: string) {
+    const low = s.toLowerCase();
+    for (const n of needles) {
+      if (low.includes(n.toLowerCase())) return true;
+    }
+    return false;
+  }
+
+  const inQuotes = quotes.filter(
+    (q) => hasNeedle(q.text) || hasNeedle(q.attribution) || (q.context ? hasNeedle(q.context) : false),
+  ).length;
+  const inFacts = facts.filter(
+    (f) => hasNeedle(f.text) || hasNeedle(f.source),
+  ).length;
+  const inJudgment = sections.filter(
+    (s) =>
+      hasNeedle(s.heading) ||
+      hasNeedle(s.body) ||
+      (s.pulls?.some((p) => hasNeedle(p.text) || hasNeedle(p.cite)) ??
+        false),
+  ).length;
+  return { inQuotes, inFacts, inJudgment };
+}
 
 export const metadata = { title: "VIII — Glossary · A Reader" };
 
@@ -88,6 +133,39 @@ export default function GlossaryPage() {
                             Source: {t.source}
                           </p>
                         ) : null}
+                        {(() => {
+                          const m = countMentions(t);
+                          const total = m.inQuotes + m.inFacts + m.inJudgment;
+                          if (total === 0) return null;
+                          return (
+                            <p className="mono text-[10px] uppercase tracking-widest text-accent flex flex-wrap gap-x-3 pt-1">
+                              {m.inJudgment > 0 ? (
+                                <a
+                                  href="/judgment"
+                                  className="underline decoration-1 underline-offset-2"
+                                >
+                                  judgment ×{m.inJudgment}
+                                </a>
+                              ) : null}
+                              {m.inQuotes > 0 ? (
+                                <a
+                                  href="/quotations"
+                                  className="underline decoration-1 underline-offset-2"
+                                >
+                                  quotations ×{m.inQuotes}
+                                </a>
+                              ) : null}
+                              {m.inFacts > 0 ? (
+                                <a
+                                  href="/facts"
+                                  className="underline decoration-1 underline-offset-2"
+                                >
+                                  facts ×{m.inFacts}
+                                </a>
+                              ) : null}
+                            </p>
+                          );
+                        })()}
                       </dd>
                     </div>
                   ))}

@@ -3,6 +3,7 @@ import {
   PageHeader,
   PageTitle,
 } from "@/components/page-chrome";
+import { ProceduralGantt } from "@/components/gantt";
 import { procedural } from "@/data/procedural";
 
 export const metadata = { title: "II — Procedural history · A Reader" };
@@ -35,7 +36,14 @@ export default function HistoryPage() {
         deck="Each step in the procedural life of application no. 28525/20, in date order, with primary-source citation."
       />
 
-      <main className="px-8 lg:px-14 pb-16 max-w-5xl">
+      <section className="px-8 lg:px-14 pb-12 max-w-7xl">
+        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-4">
+          The four joined applications
+        </p>
+        <ProceduralGantt />
+      </section>
+
+      <main className="px-8 lg:px-14 pb-16 max-w-5xl border-t border-rule pt-12">
         <ol className="border-t border-rule">
           {sorted.map((s) => (
             <li

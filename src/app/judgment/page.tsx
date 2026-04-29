@@ -4,11 +4,18 @@ import {
   PageHeader,
   PageTitle,
 } from "@/components/page-chrome";
+import { SectionRail } from "@/components/section-rail";
 import { sections } from "@/data/judgment-sections";
 
 export const metadata = { title: "III — Annotated judgment · A Reader" };
 
 export default function JudgmentPage() {
+  const railItems = sections.map((s) => ({
+    id: s.id,
+    number: s.number,
+    heading: s.heading,
+  }));
+
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
       <PageHeader no="III" title="Annotated judgment" />
@@ -64,47 +71,53 @@ export default function JudgmentPage() {
         </ol>
       </section>
 
-      <main className="px-8 lg:px-14 pb-16 max-w-5xl">
-        <ol className="space-y-px bg-rule border-t border-b border-rule">
-          {sections.map((s) => (
-            <li
-              key={s.id}
-              id={s.id}
-              className="bg-bg p-7 lg:p-10 grid grid-cols-12 gap-x-6 scroll-mt-24"
-            >
-              <div className="col-span-12 lg:col-span-2 lg:pr-2 mb-3 lg:mb-0">
-                <p className="mono text-xs text-accent">{s.number}</p>
-              </div>
-              <div className="col-span-12 lg:col-span-10 space-y-5">
-                <h2 className="serif text-2xl tracking-tight leading-tight">
-                  {s.heading}
-                </h2>
-                <p className="text-[1.05rem] leading-[1.65] max-w-3xl">
-                  {s.body}
-                </p>
-                {s.pulls?.map((p, i) => (
-                  <blockquote
-                    key={i}
-                    className="border-l-2 border-accent pl-5 my-5 max-w-2xl"
+      <main className="px-8 lg:px-14 pb-16 grid grid-cols-12 gap-6 max-w-7xl">
+        <aside className="col-span-12 xl:col-span-3 xl:order-last">
+          <SectionRail items={railItems} />
+        </aside>
+
+        <div className="col-span-12 xl:col-span-9">
+          <ol className="space-y-px bg-rule border-t border-b border-rule">
+            {sections.map((s) => (
+              <li
+                key={s.id}
+                id={s.id}
+                className="bg-bg p-7 lg:p-10 grid grid-cols-12 gap-x-6 scroll-mt-24"
+              >
+                <div className="col-span-12 lg:col-span-2 lg:pr-2 mb-3 lg:mb-0">
+                  <p className="mono text-xs text-accent">{s.number}</p>
+                </div>
+                <div className="col-span-12 lg:col-span-10 space-y-5">
+                  <h2 className="serif text-2xl tracking-tight leading-tight">
+                    {s.heading}
+                  </h2>
+                  <p className="text-[1.05rem] leading-[1.65] max-w-3xl">
+                    {s.body}
+                  </p>
+                  {s.pulls?.map((p, i) => (
+                    <blockquote
+                      key={i}
+                      className="border-l-2 border-accent pl-5 my-5 max-w-2xl"
+                    >
+                      <p className="serif italic text-xl leading-snug">
+                        &ldquo;{p.text}&rdquo;
+                      </p>
+                      <p className="mono text-[11px] text-ink-soft mt-3">
+                        {p.cite}
+                      </p>
+                    </blockquote>
+                  ))}
+                  <Link
+                    href={`#${s.id}`}
+                    className="mono text-[11px] text-ink-soft hover:text-accent inline-block"
                   >
-                    <p className="serif italic text-xl leading-snug">
-                      &ldquo;{p.text}&rdquo;
-                    </p>
-                    <p className="mono text-[11px] text-ink-soft mt-3">
-                      {p.cite}
-                    </p>
-                  </blockquote>
-                ))}
-                <Link
-                  href={`#${s.id}`}
-                  className="mono text-[11px] text-ink-soft hover:text-accent inline-block"
-                >
-                  # {s.id}
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ol>
+                    # {s.id}
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </main>
 
       <PageFooter next={{ href: "/witness", title: "A reading" }} />

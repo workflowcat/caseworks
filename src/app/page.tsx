@@ -74,6 +74,13 @@ const SECTIONS: Array<{
     one: "Bibliography of primary documents and secondary commentary cited on this site.",
     kind: "reference",
   },
+  {
+    no: "X",
+    href: "/reading-list",
+    title: "Reading list",
+    one: "External materials beyond what is cited here — primary documents, academic commentary, journalism, OSINT — curated and filterable by depth and kind.",
+    kind: "reference",
+  },
 ];
 
 export default function Home() {

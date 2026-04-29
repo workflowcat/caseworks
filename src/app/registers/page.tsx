@@ -34,6 +34,31 @@ export default function RegistersPage() {
         </p>
       </PageTitle>
 
+      <section className="px-8 lg:px-14 pb-10 max-w-5xl">
+        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-3">
+          The six voices
+        </p>
+        <ol className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-rule border border-rule">
+          {[
+            ["Court", "European Court of Human Rights"],
+            ["Ukraine", "Applicant State (1)"],
+            ["Netherlands", "Applicant State (2)"],
+            ["Russia", "Respondent State"],
+            ["Monitor", "International monitor"],
+            ["Academic", "Scholarly commentary"],
+          ].map(([name, gloss]) => (
+            <li key={name} className="bg-bg p-3 space-y-1">
+              <p className="mono text-[10px] uppercase tracking-widest text-accent">
+                {name}
+              </p>
+              <p className="serif text-xs leading-tight text-ink-soft">
+                {gloss}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {bundles.map((b, i) => (
         <Bundle key={b.id} bundle={b} idx={i} />
       ))}

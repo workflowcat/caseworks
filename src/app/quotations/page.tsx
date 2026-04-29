@@ -8,6 +8,7 @@ import {
   PageTitle,
 } from "@/components/page-chrome";
 import { CopyButton } from "@/components/copy-button";
+import { DistBar } from "@/components/dist-bar";
 
 export default function QuotationsPage() {
   const [query, setQuery] = useState("");
@@ -47,7 +48,18 @@ export default function QuotationsPage() {
         deck="Each quotation is reproduced verbatim where possible. Where compression was necessary, that is marked in the attribution. Press the copy button on any entry to put a formatted citation on your clipboard."
       />
 
-      <section className="px-8 lg:px-14 pb-6 max-w-5xl">
+      <section className="px-8 lg:px-14 pb-4 max-w-5xl">
+        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-3">
+          Distribution by source
+        </p>
+        <DistBar
+          data={clusters.map(([label, count]) => ({ label, count }))}
+          active={filter}
+          onClickItem={(label) => setFilter(filter === label ? null : label)}
+        />
+      </section>
+
+      <section className="px-8 lg:px-14 pb-6 max-w-5xl mt-6">
         <div className="border border-rule grid grid-cols-12 gap-3 px-4 py-3 items-baseline">
           <p className="col-span-12 md:col-span-2 mono text-[10px] uppercase tracking-widest text-ink-soft">
             Search
@@ -103,10 +115,17 @@ export default function QuotationsPage() {
             return (
               <li
                 key={q.id}
-                className="grid grid-cols-12 gap-3 py-7 border-b border-rule"
+                id={`q-${q.id}`}
+                className="grid grid-cols-12 gap-3 py-7 border-b border-rule scroll-mt-24"
               >
                 <p className="col-span-2 md:col-span-1 mono text-[11px] text-ink-soft pt-1">
-                  {String(i + 1).padStart(2, "0")}
+                  <a
+                    href={`#q-${q.id}`}
+                    className="hover:text-accent"
+                    title="Permalink to this quotation"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </a>
                 </p>
                 <div className="col-span-10 md:col-span-11 space-y-3">
                   <blockquote className="serif text-[1.15rem] lg:text-[1.3rem] leading-snug max-w-3xl">

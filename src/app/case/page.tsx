@@ -5,6 +5,8 @@ import {
   PageTitle,
   Cite,
 } from "@/components/page-chrome";
+import { ForumStatusStrip } from "@/components/forum-status";
+import { LaunchGeometry } from "@/components/launch-geometry";
 
 export const metadata = {
   title: "I — The case · A Reader",
@@ -20,6 +22,10 @@ export default function CasePage() {
         title="The Netherlands v. Russia."
         deck="Inter-state proceeding under the European Convention on Human Rights, application no. 28525/20 — concerning the downing of MH17."
       />
+
+      <section className="px-8 lg:px-14 pb-10 max-w-5xl">
+        <ForumStatusStrip />
+      </section>
 
       {/* Identifier block */}
       <section className="px-8 lg:px-14 pb-10 max-w-5xl">
@@ -68,6 +74,7 @@ export default function CasePage() {
         title="The downing"
         deck="As accepted by the Grand Chamber, the District Court of The Hague, and the ICAO Council."
       >
+        <LaunchGeometry />
         <p>
           On 17 July 2014 Malaysia Airlines flight MH17 was shot down
           near Snizhne, in an occupied part of the Donetsk region. The

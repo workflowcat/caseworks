@@ -5,6 +5,48 @@ import {
 } from "@/components/page-chrome";
 import { CopyButton } from "@/components/copy-button";
 import { sources, groupLabels, type Source } from "@/data/sources";
+import { quotes } from "@/data/quotes";
+import { facts } from "@/data/facts";
+
+// Heuristic citation counter: count how often a source's title fragment or
+// publication name appears across the site's text fields.
+function citationCount(s: Source) {
+  const needles = [
+    s.title.toLowerCase().slice(0, 28),
+    s.publication?.toLowerCase() ?? "",
+    s.authors?.toLowerCase() ?? "",
+  ].filter(Boolean);
+
+  // Identifying name for each known source — improves accuracy for the most
+  // commonly cited ones.
+  const idHints: Record<string, string[]> = {
+    "echr-pr-173": ["echr pr 173", "press release ech", "press release no. 173"],
+    "echr-pr-026": ["echr pr 026", "press release ech", "press release no. 026"],
+    "echr-pr-286": ["echr pr 286", "press release ech"],
+    "hudoc-merits": ["echr pr 173", "9 july 2025", "hudoc"],
+    "hague-mh17": ["hague district court", "courtmh17"],
+    "icao-decision": ["icao", "12 may 2025"],
+    "icj-pm": ["icj", "16 march 2022"],
+    "icj-prelim": ["icj", "preliminary objections"],
+    "milanovic-2025": ["milanović", "ejil"],
+    "khachatryan-2025": ["khachatryan", "strasbourg observers"],
+    "milanovic-shah-amicus": ["milanović and shah", "ssrn"],
+    "bellingcat-mh17": ["bellingcat"],
+  };
+  const hints = idHints[s.id] ?? [];
+  const allNeedles = [...needles, ...hints];
+
+  let count = 0;
+  for (const q of quotes) {
+    const blob = `${q.text} ${q.attribution} ${q.context ?? ""}`.toLowerCase();
+    if (allNeedles.some((n) => n && blob.includes(n))) count++;
+  }
+  for (const f of facts) {
+    const blob = `${f.text} ${f.source}`.toLowerCase();
+    if (allNeedles.some((n) => n && blob.includes(n))) count++;
+  }
+  return count;
+}
 
 export const metadata = { title: "IX — Sources · A Reader" };
 
@@ -57,7 +99,7 @@ export default function SourcesPage() {
                       <p className="mono text-[11px] leading-snug bg-bg-2 p-3 border border-rule">
                         {s.citation}
                       </p>
-                      <div className="flex items-center gap-4 pt-1">
+                      <div className="flex items-center gap-4 pt-1 flex-wrap">
                         <CopyButton text={s.citation} />
                         {s.url ? (
                           <a
@@ -69,6 +111,15 @@ export default function SourcesPage() {
                             Open ↗
                           </a>
                         ) : null}
+                        {(() => {
+                          const c = citationCount(s);
+                          if (c === 0) return null;
+                          return (
+                            <span className="mono text-[10px] uppercase tracking-widest text-accent">
+                              cited on this site ×{c}
+                            </span>
+                          );
+                        })()}
                       </div>
                       {s.notes ? (
                         <p className="text-xs italic text-ink-soft">
