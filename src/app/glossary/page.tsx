@@ -70,10 +70,10 @@ export default function GlossaryPage() {
 
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VII" title="Glossary" current="/glossary" />
+      <PageHeader no="IX" title="Glossary" current="/glossary" />
 
       <PageTitle
-        kicker="VII · Glossary"
+        kicker="IX · Glossary"
         title="Defined terms."
         deck="Used on this site. Defined briefly, with sources where applicable. Cluster-grouped."
       />

@@ -33,7 +33,7 @@ export const sections: Section[] = [
     href: "/judgment",
     title: "Annotated judgment",
     short: "Judgment",
-    one: "The merits-judgment press release, section by section, with anchor links to the controlling parts of the public record.",
+    one: "The merits-judgment press release, section by section, with paragraph anchors into the controlling parts of the public record.",
     kind: "reading",
   },
   {
@@ -62,6 +62,22 @@ export const sections: Section[] = [
   },
   {
     no: "VII",
+    href: "/people",
+    title: "People",
+    short: "People",
+    one: "Judges, defendants, individuals named on ICC arrest warrants. Each entry sourced.",
+    kind: "reference",
+  },
+  {
+    no: "VIII",
+    href: "/timeline",
+    title: "Conflict timeline",
+    short: "Timeline",
+    one: "Events the Court relied on as evidence — Mariupol, Kramatorsk, the children transfers, the siege cities — alongside the procedural-political turning points.",
+    kind: "reference",
+  },
+  {
+    no: "IX",
     href: "/glossary",
     title: "Glossary",
     short: "Glossary",
@@ -69,7 +85,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "VIII",
+    no: "X",
     href: "/sources",
     title: "Sources",
     short: "Sources",
@@ -77,7 +93,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "IX",
+    no: "XI",
     href: "/reading-list",
     title: "Reading list",
     short: "Reading list",
@@ -85,7 +101,7 @@ export const sections: Section[] = [
     kind: "reference",
   },
   {
-    no: "X",
+    no: "XII",
     href: "/verify",
     title: "Verify",
     short: "Verify",

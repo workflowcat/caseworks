@@ -62,10 +62,10 @@ const ORDER: Source["group"][] = [
 export default function SourcesPage() {
   return (
     <div className="min-h-screen bg-bg text-ink flex flex-col">
-      <PageHeader no="VIII" title="Sources" current="/sources" />
+      <PageHeader no="X" title="Sources" current="/sources" />
 
       <PageTitle
-        kicker="VIII · Sources"
+        kicker="X · Sources"
         title="Bibliography."
         deck="Primary documents first; secondary commentary after. Each entry has a copyable formatted citation."
       >
