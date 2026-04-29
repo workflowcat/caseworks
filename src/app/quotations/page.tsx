@@ -10,6 +10,8 @@ import {
 import { CopyButton } from "@/components/copy-button";
 import { DistBar } from "@/components/dist-bar";
 import { SourceLine } from "@/components/source-link";
+import { ConfidenceBadge } from "@/components/confidence-badge";
+import { QUOTE_CONFIDENCE } from "@/data/confidence";
 
 export default function QuotationsPage() {
   const [query, setQuery] = useState("");
@@ -46,8 +48,10 @@ export default function QuotationsPage() {
       <PageTitle
         kicker="V · Quotations"
         title="On the record."
-        deck="Each quotation is reproduced verbatim where possible. Where compression was necessary, that is marked in the attribution. Press the copy button on any entry to put a formatted citation on your clipboard."
-      />
+        deck="Each quotation is reproduced verbatim where possible. Where compression was necessary, that is marked. Press the copy button on any entry to put a formatted citation on your clipboard."
+      >
+        <ConfidenceKey />
+      </PageTitle>
 
       <section className="px-8 lg:px-14 pb-4 max-w-5xl">
         <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-3">
@@ -134,9 +138,14 @@ export default function QuotationsPage() {
                     {q.text}
                     <span className="text-accent">&rdquo;</span>
                   </blockquote>
-                  <p className="mono text-[11px] uppercase tracking-widest text-accent">
-                    {q.attribution}
-                  </p>
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <p className="mono text-[11px] uppercase tracking-widest text-accent">
+                      {q.attribution}
+                    </p>
+                    <ConfidenceBadge
+                      c={QUOTE_CONFIDENCE[q.id] ?? "verbatim"}
+                    />
+                  </div>
                   {q.context ? (
                     <p className="serif italic text-sm text-ink-soft">
                       <SourceLine source={q.context} />
@@ -151,6 +160,18 @@ export default function QuotationsPage() {
       </main>
 
       <PageFooter next={{ href: "/facts", title: "Facts" }} />
+    </div>
+  );
+}
+
+function ConfidenceKey() {
+  return (
+    <div className="flex flex-wrap gap-x-5 gap-y-2 mt-2">
+      {(["verbatim", "paraphrased", "translated", "secondary"] as const).map(
+        (c) => (
+          <ConfidenceBadge key={c} c={c} showLabel />
+        ),
+      )}
     </div>
   );
 }

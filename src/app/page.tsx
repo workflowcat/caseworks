@@ -81,6 +81,13 @@ const SECTIONS: Array<{
     one: "External materials beyond what is cited here — primary documents, academic commentary, journalism, OSINT — curated and filterable by depth and kind.",
     kind: "reference",
   },
+  {
+    no: "XI",
+    href: "/verify",
+    title: "Verify",
+    one: "Fact-checker's surface. Every claim on the site in one table, with its confidence band, source, and link.",
+    kind: "reference",
+  },
 ];
 
 export default function Home() {

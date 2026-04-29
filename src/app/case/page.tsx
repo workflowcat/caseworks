@@ -22,7 +22,12 @@ export default function CasePage() {
         kicker="I · The case"
         title="The Netherlands v. Russia."
         deck="Inter-state proceeding under the European Convention on Human Rights, application no. 28525/20 — concerning the downing of MH17."
-      />
+      >
+        <p className="mono text-[11px] text-ink-soft border border-rule px-3 py-2 inline-block">
+          How to read this — citations in italic small caps after a
+          claim link to the verified primary source for that claim.
+        </p>
+      </PageTitle>
 
       <section className="px-8 lg:px-14 pb-10 max-w-5xl">
         <ForumStatusStrip />

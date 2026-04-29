@@ -10,6 +10,8 @@ import {
 import { CopyButton } from "@/components/copy-button";
 import { DistBar } from "@/components/dist-bar";
 import { SourceLine } from "@/components/source-link";
+import { ConfidenceBadge } from "@/components/confidence-badge";
+import { FACT_CONFIDENCE } from "@/data/confidence";
 
 export default function FactsPage() {
   const [query, setQuery] = useState("");
@@ -63,7 +65,9 @@ export default function FactsPage() {
         kicker="VI · Facts"
         title="Atomic, sourced."
         deck="Each fact is one claim, with its primary source and date. Filter, sort, search; copy any fact with its citation."
-      />
+      >
+        <ConfidenceKey />
+      </PageTitle>
 
       <section className="px-8 lg:px-14 pb-4 max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
@@ -181,6 +185,9 @@ export default function FactsPage() {
                     <span className="text-ink-soft italic serif normal-case tracking-normal">
                       <SourceLine source={f.source} />
                     </span>
+                    <ConfidenceBadge
+                      c={FACT_CONFIDENCE[f.id] ?? "verbatim"}
+                    />
                   </div>
                   <CopyButton text={citation} />
                 </div>
@@ -193,6 +200,18 @@ export default function FactsPage() {
       <PageFooter
         next={{ href: "/registers", title: "Voices on the record" }}
       />
+    </div>
+  );
+}
+
+function ConfidenceKey() {
+  return (
+    <div className="flex flex-wrap gap-x-5 gap-y-2 mt-2">
+      {(["verbatim", "paraphrased", "translated", "secondary"] as const).map(
+        (c) => (
+          <ConfidenceBadge key={c} c={c} showLabel />
+        ),
+      )}
     </div>
   );
 }

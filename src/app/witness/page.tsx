@@ -27,6 +27,12 @@ export default function WitnessPage() {
           materials it draws on. Where the reading compresses or
           paraphrases, that is marked.
         </p>
+        <p className="mono text-[11px] text-ink-soft border border-rule px-3 py-2 inline-block mt-4">
+          How to read this — text in straight quotes is reproduced
+          verbatim from the cited primary source. The framing prose
+          around it is a summary; the source line at the end of each
+          chapter governs.
+        </p>
       </PageTitle>
 
       <Chapter

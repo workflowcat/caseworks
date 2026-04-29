@@ -13,6 +13,7 @@ import {
   DEPTH_LABEL,
   type ReadingItem,
 } from "@/data/reading";
+import { SITE_VERIFIED_AT } from "@/data/verified-at";
 
 const KIND_ORDER: ReadingItem["kind"][] = [
   "primary-court",
@@ -83,6 +84,9 @@ export default function ReadingListPage() {
           was uncertain, the entry links to the publication&rsquo;s
           topic page and that is noted in the abstract. Citations
           approximate OSCOLA.
+        </p>
+        <p className="mono text-[11px] text-ink-soft border border-rule px-3 py-2 inline-block mt-4">
+          External links last verified on {SITE_VERIFIED_AT}.
         </p>
       </PageTitle>
 

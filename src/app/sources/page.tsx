@@ -7,6 +7,7 @@ import { CopyButton } from "@/components/copy-button";
 import { sources, groupLabels, type Source } from "@/data/sources";
 import { quotes } from "@/data/quotes";
 import { facts } from "@/data/facts";
+import { SITE_VERIFIED_AT } from "@/data/verified-at";
 
 // Heuristic citation counter: count how often a source's title fragment or
 // publication name appears across the site's text fields.
@@ -67,7 +68,11 @@ export default function SourcesPage() {
         kicker="IX · Sources"
         title="Bibliography."
         deck="Primary documents first; secondary commentary after. Each entry has a copyable formatted citation."
-      />
+      >
+        <p className="mono text-[11px] text-ink-soft border border-rule px-3 py-2 inline-block">
+          External links last verified on {SITE_VERIFIED_AT}.
+        </p>
+      </PageTitle>
 
       <main className="px-8 lg:px-14 pb-16 max-w-5xl">
         {ORDER.map((g) => {
