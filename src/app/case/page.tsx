@@ -10,6 +10,7 @@ import { ForumStatusStrip } from "@/components/forum-status";
 import { LaunchGeometry } from "@/components/launch-geometry";
 import { SourceLine } from "@/components/source-link";
 import { GlossaryProse } from "@/components/glossary-link";
+import { Sidenote } from "@/components/sidenote";
 
 export const metadata = {
   title: "I — The case · A Reader",
@@ -93,12 +94,37 @@ export default function CasePage() {
         <LaunchGeometry />
         <p>
           <GlossaryProse text="On 17 July 2014 Malaysia Airlines flight MH17 was shot down near Snizhne, in an occupied part of the Donetsk region. The District Court of The Hague found, on 17 November 2022, that the missile had been fired from a farm field near Pervomaiskyi, in territory the separatists controlled." />
+          <Sidenote n="1">
+            All 298 people on board were killed; 196 were Dutch
+            nationals. See{" "}
+            <a href="/facts#f-mh17-killed" className="underline">
+              facts §
+            </a>
+            .
+          </Sidenote>
         </p>
         <p>
           <GlossaryProse text="The European Court of Human Rights, in its admissibility decision of 25 January 2023, held that the downing had occurred wholly within territory in the hands of the separatists and therefore within Russia's spatial jurisdiction. In its merits judgment of 9 July 2025, the Court agreed that the missile had been fired by either a member of the Russian military crew of the Buk-TELAR or a member of the 'DPR', and that it was unnecessary to decide which — Russia was responsible for both." />
+          <Sidenote n="2">
+            HUDOC §&nbsp;461 — the IHL principles of distinction and
+            precautions paragraph delivering the Article 2 substantive
+            finding.{" "}
+            <a
+              href="/judgment/paragraphs#para-461"
+              className="underline"
+            >
+              Read on site
+            </a>
+            .
+          </Sidenote>
         </p>
         <p>
           <GlossaryProse text="The ICAO Council, on 12 May 2025, found Russia in breach of Article 3 bis of the Chicago Convention by use of weapons against civil aircraft in flight." />
+          <Sidenote n="3">
+            Vote 22 to 3, with 10 abstentions; first decision on the
+            merits of an Article 84 dispute in the Council&rsquo;s
+            history. Russia has appealed to the ICJ.
+          </Sidenote>
         </p>
       </Section>
 
@@ -274,6 +300,34 @@ export default function CasePage() {
           ))}
         </ul>
       </Section>
+
+      <section className="px-8 lg:px-14 py-10 max-w-5xl border-t border-rule">
+        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-3">
+          Embed this case
+        </p>
+        <p className="text-sm leading-relaxed mb-3 max-w-2xl">
+          A 600×400 card you can drop into your own page. Updates if
+          this site does.
+        </p>
+        <pre className="mono text-[11px] bg-bg-2 border border-rule p-3 leading-snug overflow-x-auto">
+{`<iframe
+  src="https://caseworks-blue.vercel.app/embed/case"
+  width="600" height="400"
+  loading="lazy"
+  style="border:0"
+></iframe>`}
+        </pre>
+        <p className="mt-3 mono text-[11px] text-ink-soft">
+          Preview at{" "}
+          <Link
+            href="/embed/case"
+            className="underline decoration-accent decoration-1 underline-offset-2"
+          >
+            /embed/case
+          </Link>
+          .
+        </p>
+      </section>
 
 <SeeAlso
         items={[

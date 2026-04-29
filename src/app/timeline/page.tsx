@@ -6,6 +6,7 @@ import {
 } from "@/components/page-chrome";
 import { SourceLine } from "@/components/source-link";
 import { GlossaryProse } from "@/components/glossary-link";
+import { KindGlyph } from "@/components/kind-glyph";
 import {
   conflict,
   KIND_LABEL,
@@ -44,9 +45,10 @@ export default function TimelinePage() {
               <div className="col-span-12 md:col-span-3 lg:col-span-2 space-y-1.5">
                 <p className="mono text-xs">{e.display}</p>
                 <p
-                  className="mono text-[10px] uppercase tracking-widest"
+                  className="mono text-[10px] uppercase tracking-widest flex items-center gap-1.5"
                   style={{ color: KIND_TINT[e.kind] }}
                 >
+                  <KindGlyph kind={e.kind} color={KIND_TINT[e.kind]} />
                   {KIND_LABEL[e.kind]}
                 </p>
                 {e.place ? (

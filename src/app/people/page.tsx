@@ -5,6 +5,7 @@ import {
   SeeAlso,
 } from "@/components/page-chrome";
 import { SourceLine } from "@/components/source-link";
+import { InitialAvatar } from "@/components/initial-avatar";
 import {
   people,
   GROUP_LABEL,
@@ -47,15 +48,20 @@ export default function PeoplePage() {
                     key={p.id}
                     className="grid grid-cols-12 gap-3 py-5 border-b border-rule"
                   >
-                    <div className="col-span-12 md:col-span-3 lg:col-span-3 space-y-1">
-                      <p className="serif text-base leading-tight">
-                        {p.name}
-                      </p>
-                      {p.state ? (
-                        <p className="mono text-[10px] uppercase tracking-widest text-ink-soft">
-                          {p.state}
+                    <div className="col-span-12 md:col-span-3 lg:col-span-3 flex items-start gap-3">
+                      <span className="text-ink-soft mt-0.5">
+                        <InitialAvatar name={p.name} size={36} />
+                      </span>
+                      <div className="space-y-1 min-w-0">
+                        <p className="serif text-base leading-tight">
+                          {p.name}
                         </p>
-                      ) : null}
+                        {p.state ? (
+                          <p className="mono text-[10px] uppercase tracking-widest text-ink-soft">
+                            {p.state}
+                          </p>
+                        ) : null}
+                      </div>
                     </div>
                     <div className="col-span-12 md:col-span-9 lg:col-span-9 space-y-2">
                       <p className="text-base leading-snug">{p.role}</p>

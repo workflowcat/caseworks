@@ -49,6 +49,51 @@ export default function Home() {
           </span>
         </p>
 
+        <section className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-px bg-rule border-y border-rule max-w-3xl">
+          <Link
+            href="/overview"
+            className="bg-bg p-4 hover:bg-bg-2 transition-colors"
+          >
+            <p className="mono text-[10px] uppercase tracking-widest text-accent">
+              Overview
+            </p>
+            <p className="serif text-base mt-1.5 leading-tight">
+              The case at a glance
+            </p>
+            <p className="text-xs text-ink-soft mt-1">
+              Single-screen poster, printable.
+            </p>
+          </Link>
+          <Link
+            href="/paths"
+            className="bg-bg p-4 hover:bg-bg-2 transition-colors"
+          >
+            <p className="mono text-[10px] uppercase tracking-widest text-accent">
+              Paths
+            </p>
+            <p className="serif text-base mt-1.5 leading-tight">
+              Where to start
+            </p>
+            <p className="text-xs text-ink-soft mt-1">
+              Three reading paths, by audience.
+            </p>
+          </Link>
+          <Link
+            href="/search"
+            className="bg-bg p-4 hover:bg-bg-2 transition-colors"
+          >
+            <p className="mono text-[10px] uppercase tracking-widest text-accent">
+              Search
+            </p>
+            <p className="serif text-base mt-1.5 leading-tight">
+              Across the site
+            </p>
+            <p className="text-xs text-ink-soft mt-1">
+              Sections, paragraphs, quotes, facts.
+            </p>
+          </Link>
+        </section>
+
         <section className="mt-14">
           <p className="mono text-[10px] uppercase tracking-widest text-ink-soft mb-4">
             Reading

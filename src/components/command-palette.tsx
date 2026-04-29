@@ -155,6 +155,14 @@ export function CommandPalette() {
     el?.scrollIntoView({ block: "nearest" });
   }, [active]);
 
+  // Skip the palette on embeddable / oembed routes so the floating button
+  // doesn't appear inside iframes.
+  if (typeof window !== "undefined") {
+    const path = window.location.pathname;
+    if (path.startsWith("/embed/") || path.startsWith("/oembed"))
+      return null;
+  }
+
   if (!open) {
     return (
       <button
